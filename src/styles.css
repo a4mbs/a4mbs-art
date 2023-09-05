@@ -1,0 +1,66 @@
+/* import google fonts and boxicons */
+@import 'boxicons/css/boxicons.min.css'; /* import boxicons */
+@import '../a4mbs-config/a4mbs-fonts.config.css'; /* import Google fonts */
+
+/* import tailwindcss */
+/* How to Fix unknownAtRules Warnings From Tailwind CSS: https://www.codeconcisely.com/posts/tailwind-css-unknown-at-rules/ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*this won't work when using @import */
+@layer base {
+  body{
+    @apply
+      leading-relaxed
+      font-sans;
+  }
+  
+  h4, h5, h6{
+    @apply
+      font-special-alternate;
+  }
+  
+  h4 {
+    @apply text-4xl
+      font-bold
+      mb-10;
+  }
+  
+  h5 {
+    @apply 
+      text-2xl
+      font-semibold;
+  }
+  
+  h6 {
+    @apply 
+      text-lg
+      font-semibold;
+  }
+  
+  p, ul {
+    @apply
+      mb-8;
+  }
+  
+  li {
+    @apply
+      mb-3;      
+  }
+
+  a {
+    @apply
+      text-success-default
+      hover:text-success-dark
+      transition-colors
+      font-semibold;
+  }
+}
+
+
+
+@import './widgets/buttons-outline.css'; /* import buttons outline */
+@import './widgets/buttons.css'; /* import buttons */
+

@@ -1,0 +1,83 @@
+.btn-primary {
+  @apply
+    text-white 
+    bg-primary-default
+    hover:bg-primary-dark
+    font-medium 
+    rounded-lg 
+    text-sm 
+    px-5 
+    py-2.5 
+    mr-2 
+    mb-2
+}
+
+.btn-secondary {
+  @apply
+    text-white 
+    bg-secondary-default
+    hover:bg-secondary-dark
+    font-medium 
+    rounded-lg 
+    text-sm 
+    px-5 
+    py-2.5 
+    mr-2 
+    mb-2
+}
+
+.btn-warning {
+  @apply
+    text-white 
+    bg-warning-default
+    hover:bg-warning-dark
+    font-medium 
+    rounded-lg 
+    text-sm 
+    px-5 
+    py-2.5 
+    mr-2 
+    mb-2
+}
+
+.btn-success {
+  @apply
+    text-white 
+    bg-success-default
+    hover:bg-success-dark
+    font-medium 
+    rounded-lg 
+    text-sm 
+    px-5 
+    py-2.5 
+    mr-2 
+    mb-2
+}
+
+.btn-danger {
+  @apply
+    text-white 
+    bg-danger-default
+    hover:bg-danger-dark
+    font-medium 
+    rounded-lg 
+    text-sm 
+    px-5 
+    py-2.5 
+    mr-2 
+    mb-2
+}
+
+.btn-info {
+  @apply
+    text-white 
+    bg-info-default
+    hover:bg-info-dark
+    font-medium 
+    rounded-lg 
+    text-sm 
+    px-5 
+    py-2.5 
+    mr-2 
+    mb-2
+}
