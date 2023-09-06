@@ -1,0 +1,68 @@
+<div class="bg-dark-default text-white">
+  <div class="container-center p-4 pt-16 pb-8">
+    <div class="2xl:flex 2xl:justify-between">
+      <!-- site title and logo -->
+      <div class="mb-16 2xl:mb-0">
+        <span class="flex items-center">
+          <w-image-display 
+              class="mr-3 hidden md:block"
+              width="32"
+              height="32"
+              [displayAsCircle]="true"
+              [imagePath]="getLogoPath()"
+          ></w-image-display>
+          <span class="font-serif self-center text-3xl font-semibold whitespace-nowrap">{{getWebsiteTitle()}}</span>
+        </span>
+      </div>
+      <!-- stock images, print on demand, legal -->
+      <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div>
+          <h6 class="mb-6 text-sm font-semibold text-slate-100 uppercase">Stock Images</h6>
+          <ul class="text-slate-100 font-medium">
+            <ng-container *ngFor="let si of getStockImagesResources()">
+              <li class="mb-2">
+                <a [href]="si.link" target="_blank">{{si.title}}</a>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-6 text-sm font-semibold text-slate-100 uppercase">Print on Demand</h6>
+          <ul class="text-slate-100 font-medium">
+            <ng-container *ngFor="let pod of getPrintOnDemandResources()">
+              <li class="mb-2">
+                <a [href]="pod.link" target="_blank">{{pod.title}}</a>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-6 text-sm font-semibold text-slate-100 uppercase">Legal</h6>
+          <ul class="text-slate-100 font-medium">
+            <li class="mb-2">
+              <a href="/privacy-policy">Privacy Policy</a>
+            </li>
+            <li class="mb-2">
+              <a href="terms-of-use">Terms &amp; Conditions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- line -->
+    <hr class="my-6 border-slate-200 sm:mx-auto lg:my-8">
+    <!-- copyright -->
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <span class="text-sm text-slate-100 sm:text-center">© {{getCurrentYear()}}
+        <a [href]="getWebsiteURL()">{{getWebsiteTitle()}}™</a> - All Rights Reserved. </span>
+      <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+        <ng-container *ngFor="let sm of getSocialMediaResources()">
+          <a [href]="sm.link" target="_blank" class="hover:scale-[1.8]">
+            <i class="bx" [ngClass]="sm.icon"></i>
+            <span class="sr-only">{{sm.title}}</span>
+          </a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

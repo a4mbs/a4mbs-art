@@ -1,0 +1,13 @@
+.container-center{
+  @apply
+    5xl:mx-[25%]
+    4xl:mx-[23%]
+    3xl:mx-[21%]
+    2xl:mx-[19%]
+    xl:mx-[17%]
+    lg:mx-[15%]
+    md:mx-16
+    sm:mx-2
+    mx-3;
+}
+

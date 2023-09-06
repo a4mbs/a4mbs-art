@@ -1,0 +1,38 @@
+<!-- <div class="relative h-screen bg-center bg-cover" [style.backgroundImage]="'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(' + heroImageURL + ')'">
+  <div class="absolute inset-0 flex items-center justify-center text-white">
+    <div class="text-center">
+      <h1 class="text-6xl md:text-7xl lg:text-8xl mb-5">{{title}}</h1>
+      <p class="text-3xl" *ngIf="fullHeight">{{subtitle}}</p>
+      <button class="rounded-full w-14 h-14 border-2 text-3xl md:w-20 md:h-20 md:border-4 md:text-5xl border-white bg-transparent hover:bg-gray-800 hover:w-20 hover:h-20 md:hover:w-24 md:hover:h-24" *ngIf="fullHeight">
+        <i class='bx bx-arrow-back bx-rotate-270'></i>
+      </button>
+    </div>
+  </div>
+</div> -->
+<div class="relative h-screen bg-center bg-cover" [style.backgroundImage]="'linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(' + heroImageURL + ')'">
+  <div class="absolute inset-0 grid place-items-center text-white">
+    <div class="text-center">
+      <h1 class="text-6xl md:text-7xl lg:text-8xl mb-5 font-light">{{title}}</h1>
+      <p class="text-2xl font-special-simple uppercase font-bold" *ngIf="fullHeight">{{subtitle}}</p>
+      <button 
+          class="rounded-full 
+            w-14 
+            h-14 
+            border-2 
+            text-3xl 
+            lg:w-20 
+            lg:h-20 
+            lg:border-4 
+            lg:text-5xl 
+            border-white 
+            bg-transparent 
+            transform 
+            transition-transform 
+            duration-300 
+            hover:scale-110" 
+          *ngIf="fullHeight">
+        <i class='bx bx-arrow-back bx-rotate-270'></i>
+      </button>
+    </div>
+  </div>
+</div>

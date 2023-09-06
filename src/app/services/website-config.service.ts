@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import  { A4MBS_CONFIG } from '../../../a4mbs.config';
+import  { A4MBS_CONFIG } from '../../../a4mbs-config/_a4mbs-general.config';
 
 interface iWebsiteSettings {
   title: string;
@@ -22,7 +22,14 @@ interface iBranding {
 }
 
 interface iSocialMedia {
-  [key: string]: string;
+  title: string;
+  icon: string;
+  link: string;  
+}
+
+interface iSellingMedia {
+  title: string;
+  link: string;
 }
 
 interface iCDNService {
@@ -45,7 +52,9 @@ interface iLegalDetails {
 interface iA4MBSConfig {
   websiteSettings: iWebsiteSettings;
   branding: iBranding;
-  socialMedia: iSocialMedia;
+  socialMedia: Array<iSocialMedia>;
+  stockImages: Array<iSellingMedia>;
+  printOnDemand: Array<iSellingMedia>;
   CDN: iCDN;
   legalDetails: iLegalDetails; 
 }
@@ -64,12 +73,20 @@ class WebsiteConfigService {
     return this.config.branding;
   }
 
-  getSocialMediaLinks(): iSocialMedia {
+  getSocialMedia(): Array<iSocialMedia> {
     return this.config.socialMedia;
   }
 
-  getCDN(): iCDN {
-    return this.config.CDN;
+  getStockImages(): Array<iSellingMedia> {
+    return this.config.stockImages;
+  }
+
+  getPrintOnDemand(): Array<iSellingMedia> {
+    return this.config.printOnDemand;
+  }
+
+  getCDN(): iCDNService {
+    return this.config.CDN.services[this.config.CDN.currentServiceIndex];
   }
 
   getLegalDetails(): iLegalDetails {
@@ -82,6 +99,7 @@ export {
   iCDN,
   iCDNService,
   iSocialMedia,
+  iSellingMedia,
   iWebsiteSettings,
   iLegalDetails, 
   WebsiteConfigService

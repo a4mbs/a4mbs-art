@@ -1,9 +1,8 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h4>Terms and Conditions for  <span class="text-primary-default">{{getWebsiteTitle()}}</span> (<span class="text-primary-default">{{getWebsiteShortTitle()}}</span>)</h4>
+<div class="container-center">
+
+      <h4>Terms and Conditions for  <span>{{getWebsiteTitle()}}</span> (<span>{{getWebsiteShortTitle()}}</span>)</h4>
       <p  class="mb-2">
-        <strong>Last updated: [<span class="text-primary-default">{{getPrivacyTermsOfUseUpdated()}}</span>]</strong>
+        <strong>Last updated: [<span>{{getPrivacyTermsOfUseUpdated()}}</span>]</strong>
       </p>
       <p>Welcome to <a class="btn-link" href="{{getWebsiteURL()}}/">{{getWebsiteURL()}}</a> ("the Website"). Please read these Terms and Conditions ("the Terms") carefully before using our Website. </p>
       <h5>Agreement</h5>
@@ -19,7 +18,18 @@
       <h5>Changes to the Terms</h5>
       <p>We may revise these Terms at our discretion, by updating this page. Changes will become effective once they are posted on the Website. It is your responsibility to check this page regularly to become familiar with the current version of the Terms.</p>
       <h5>Contact Us</h5>
-      <p>If you have any questions or concerns regarding these Terms, please feel free to contact us at  <a href="mailto:{{getContactEmail()}}" class="btn-link">{{getContactEmail()}}</a>.</p>
+      <p>If you have any questions or concerns regarding these Terms, please feel free to contact us at 
+        <a data-popover-target="popover-default" href="mailto:{{getContactEmail()}}" class="btn-link">
+          {{getContactEmail()}}
+        </a>.
+      </p>
+      <div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+        <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+            <h3 class="font-semibold text-gray-900 dark:text-white">Popover title</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>And here's some amazing content. It's very engaging. Right?</p>
+        </div>
+        <div data-popper-arrow></div>
     </div>
-  </div>
-</div>
+    </div>
