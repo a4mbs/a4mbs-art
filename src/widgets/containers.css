@@ -1,4 +1,4 @@
-.container-center{
+.container-center {
   @apply
     5xl:mx-[25%]
     4xl:mx-[23%]
@@ -11,3 +11,11 @@
     mx-3;
 }
 
+.container-center-special {
+  @apply
+    mx-auto 
+    max-w-4xl 
+    grid 
+    place-items-center 
+    px-3;    
+}

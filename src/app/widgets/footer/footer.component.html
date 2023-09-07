@@ -1,18 +1,37 @@
 <div class="bg-dark-default text-white">
   <div class="container-center p-4 pt-16 pb-8">
     <div class="2xl:flex 2xl:justify-between">
-      <!-- site title and logo -->
+      <!-- site title and logo  on larger screens-->
       <div class="mb-16 2xl:mb-0">
-        <span class="flex items-center">
-          <w-image-display 
-              class="mr-3 hidden md:block"
-              width="32"
-              height="32"
-              [displayAsCircle]="true"
-              [imagePath]="getLogoPath()"
-          ></w-image-display>
-          <span class="font-serif self-center text-3xl font-semibold whitespace-nowrap">{{getWebsiteTitle()}}</span>
-        </span>
+        <div class="hidden 2xl:block">
+          <span class="flex flex-col items-start">
+            <a href="/" class="hover:scale-110">
+              <w-image-display 
+                  class="mr-3 hidden md:block"
+                  width="150"
+                  height="150"
+                  [displayAsCircle]="true"
+                  [imagePath]="getLogoResource()"
+              ></w-image-display>
+            </a>
+            <span class="font-serif self-center text-2xl font-semibold whitespace-nowrap hidden">{{getWebsiteTitle()}}</span>
+          </span>
+        </div>
+        <!-- site title and logo  on larger screens-->
+        <div class="block 2xl:hidden">
+          <div class="flex flex-col items-center">
+            <a href="/" class="hover:scale-110">
+              <w-image-display 
+                  class="mb-0"
+                  width="150"
+                  height="150"                 
+                  [displayAsCircle]="true"
+                  [imagePath]="getLogoResource()"
+              ></w-image-display>
+            </a>          
+            <h4 class="font-serif font-semibold whitespace-nowrap">{{getWebsiteTitle()}}</h4>
+          </div>
+        </div>
       </div>
       <!-- stock images, print on demand, legal -->
       <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

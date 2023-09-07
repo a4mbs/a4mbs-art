@@ -1,3 +1,7 @@
 <ng-container *ngIf="getCDNServiceName()==='cloudinary'">
-  <advanced-image [cldImg]="image" ></advanced-image>
+  <advanced-image 
+      [width]="width ? width : '100%'" 
+      [height]="height ? height : '100%'" 
+      [cldImg]="image">
+  </advanced-image>
 </ng-container>

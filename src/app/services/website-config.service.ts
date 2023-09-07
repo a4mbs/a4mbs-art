@@ -8,7 +8,7 @@ interface iWebsiteSettings {
   URL: string;
 }
 
-interface iLogoURLs {
+interface iLogoResources {
   png: string;
   white: string;
   black: string;
@@ -17,8 +17,8 @@ interface iLogoURLs {
 }
 
 interface iBranding {
-  heroImageURL: string;
-  logoURLs: iLogoURLs;
+  heroImageResource: string;
+  logoResources: iLogoResources;
 }
 
 interface iSocialMedia {

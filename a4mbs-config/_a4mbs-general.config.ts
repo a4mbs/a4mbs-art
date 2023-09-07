@@ -16,8 +16,8 @@ export const A4MBS_CONFIG = {
 
   // Branding
   branding: {
-    heroImageURL: 'home-page/homepage_hero.jpg',
-    logoURLs: {
+    heroImageResource: 'home-page/homepage_hero.jpg',
+    logoResources: {
       png:'logo/logo.png',
       white: 'logo/logo_white.svg',
       black: 'logo/logo_black.svg',

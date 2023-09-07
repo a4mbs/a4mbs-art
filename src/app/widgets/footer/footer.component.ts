@@ -44,7 +44,7 @@ export class WFooterComponent {
     return this.websiteConfigService.getPrintOnDemand();
   }
 
-  getLogoPath(): string {
-    return this.websiteConfigService.getBranding().logoURLs.png;
+  getLogoResource(): string {
+    return this.websiteConfigService.getBranding().logoResources.white;
   }
 }

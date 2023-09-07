@@ -12,16 +12,40 @@
 /*this won't work when using @import */
 @layer base {
 
+  .typography-size-base {
+    @apply
+      lg:text-xl
+      md:text-lg
+      text-base
+  }
+
+  .typography-size-sm {
+    @apply
+      lg:text-base
+      md:text-sm
+      text-xs
+  }
+
   * {
     transition: all 0.3s ease-in-out !important;
   }
 
-  body{
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
     @apply
       leading-relaxed
+      typography-size-base
       font-sans;
   }
   
+  footer {
+    @apply
+      typography-size-sm;
+  }
+
   h1, h2, h3 {
     @apply
       font-serif
@@ -30,21 +54,27 @@
 
   h1 {
     @apply
-      text-8xl      
+      lg:text-8xl      
+      md:text-7xl
+      text-6xl
       mb-10;
   }
 
   h2 {
     @apply
-      text-6xl
+      lg:text-6xl
+      md:text-5xl
+      text-4xl
       mb-10;
   }
 
-h3  {
-    @apply
-      text-5xl
-      mb-10;
-  }
+  h3  {
+      @apply
+        lg:text-5xl
+        md:text-4xl
+        text-3xl
+        mb-10;
+    }
 
 
   h4, h5, h6 {
@@ -53,20 +83,26 @@ h3  {
   }
   
   h4 {
-    @apply text-4xl
-      font-bold
-      mb-10;
+    @apply 
+      lg:text-4xl
+      md:text-3xl
+      text-2xl
+      font-bold;    
   }
   
   h5 {
     @apply 
-      text-2xl
+      lg:text-2xl
+      md:text-xl
+      text-lg
       font-semibold;
   }
   
   h6 {
     @apply 
-      text-lg
+      lg:text-lg
+      md:text-base
+      text-sm
       font-semibold;
   }
   
@@ -87,7 +123,7 @@ h3  {
       transition-colors
       font-semibold
       no-underline
-      hover:underline;
+      hover:underline;   
   }
 
 }
