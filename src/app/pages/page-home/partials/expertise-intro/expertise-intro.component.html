@@ -5,12 +5,12 @@
   class="mb-6"
   [imagePath]="logoResource"
 ></w-image-display>
-<h3 class="text-center">What are my areas of expertise?</h3>
+<h3 class="text-center mb-3">What are my areas of expertise?</h3>
 <p class="text-center">
   I've been passionate about graphics for over 10 years, but what initially started as a hobby I decided to turn into a professional activity to which I dedicate full time. When your job is your passion, you can't say that you're working but rather living your dream and fulfilling your purpose, and work is a joy. I love graphics, I love to work, and I never get bored.
 </p>
   <div class="flex w-full lg:w-auto flex-col lg:flex-row lg:justify-start">
-    <button class="btn-primary lg:mr-2 w-full lg:w-auto typography-size-base">Take a look at my Adobe portfolio</button>
-    <button class="btn-outline-warning lg:ml-2 w-full lg:w-auto typography-size-base">Read my blog</button>
+    <button (click)="goToAdobeBehance()" class="btn-primary lg:mr-2 w-full lg:w-auto">Take a look at my Adobe portfolio</button>
+    <button class="btn-outline-warning lg:ml-2 w-full lg:w-auto">Read my blog</button>
   </div>
 </div>

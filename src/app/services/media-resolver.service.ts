@@ -33,8 +33,8 @@ export class MediaResolverService {
         width = width.replace('px', ''); //cloudinary requires width and height to be numbers
         height = height.replace('px', ''); //cloudinary requires width and height to be numbers
         img.resize(fill().width(width).height(height));
-        if (displayAsCircle) img.roundCorners(max());
       }
+      if (displayAsCircle) img.roundCorners(max());       
       return img;
     } else return {} as CloudinaryImage; //this is a non-sense return value, but it is required to make the compiler happy
   }

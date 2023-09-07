@@ -6,7 +6,6 @@
    hover:bg-danger-dark 
    font-medium 
    rounded-lg 
-   text-sm 
    px-5 
    py-2.5 
    text-center 
@@ -22,7 +21,6 @@
    hover:bg-primary-dark 
    font-medium 
    rounded-lg 
-   text-sm 
    px-5 
    py-2.5 
    text-center 
@@ -38,7 +36,6 @@
    hover:bg-secondary-dark 
    font-medium 
    rounded-lg 
-   text-sm 
    px-5 
    py-2.5 
    text-center 
@@ -54,7 +51,6 @@
    hover:bg-info-dark 
    font-medium 
    rounded-lg 
-   text-sm 
    px-5 
    py-2.5 
    text-center 
@@ -70,7 +66,6 @@
    hover:bg-success-dark 
    font-medium 
    rounded-lg 
-   text-sm 
    px-5 
    py-2.5 
    text-center 
@@ -86,7 +81,6 @@
    hover:bg-warning-dark 
    font-medium 
    rounded-lg 
-   text-sm 
    px-5 
    py-2.5 
    text-center 

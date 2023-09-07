@@ -12,19 +12,21 @@
 /*this won't work when using @import */
 @layer base {
 
+  /* these classes doesn't work when there are in an external file they must be declared on base layer */
   .typography-size-base {
     @apply
       lg:text-xl
       md:text-lg
       text-base
   }
-
+  
   .typography-size-sm {
     @apply
       lg:text-base
       md:text-sm
       text-xs
   }
+  
 
   * {
     transition: all 0.3s ease-in-out !important;
@@ -38,12 +40,23 @@
     @apply
       leading-relaxed
       typography-size-base
+      text-slate-950
       font-sans;
   }
   
   footer {
     @apply
       typography-size-sm;
+  }
+
+  footer a, footer button {
+    @apply
+      typography-size-sm;
+  }
+
+  button, a {
+    @apply
+      typography-size-base;
   }
 
   h1, h2, h3 {
@@ -56,24 +69,21 @@
     @apply
       lg:text-8xl      
       md:text-7xl
-      text-6xl
-      mb-10;
+      text-6xl;     
   }
 
   h2 {
     @apply
       lg:text-6xl
       md:text-5xl
-      text-4xl
-      mb-10;
+      text-4xl;     
   }
 
   h3  {
       @apply
         lg:text-5xl
         md:text-4xl
-        text-3xl
-        mb-10;
+        text-3xl;       
     }
 
 
@@ -131,3 +141,4 @@
 @import './widgets/buttons-outline.css'; /* import buttons outline */
 @import './widgets/buttons.css'; /* import buttons */
 @import './widgets/containers.css'; /* import containers */
+@import './widgets/typography.css'; /* import typography */

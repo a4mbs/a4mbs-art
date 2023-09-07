@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MediaResolverService } from 'src/app/services/media-resolver.service';
 import { WebsiteConfigService } from 'src/app/services/website-config.service';
 
 @Component({
@@ -10,8 +9,12 @@ import { WebsiteConfigService } from 'src/app/services/website-config.service';
 export class PHPExpertiseIntroComponent {
   logoResource: string;
 
-  constructor(private websiteConfigService: WebsiteConfigService, mediaResolverService: MediaResolverService) {
+  constructor(private websiteConfigService: WebsiteConfigService) {
     this.logoResource = websiteConfigService.getBranding().logoResources.color;
+  }
+
+  goToAdobeBehance() {
+    window.open(this.websiteConfigService.getSocialMedia().find(sm => sm.title.toLowerCase()==='behance')?.link, '_blank');
   }
 
 }

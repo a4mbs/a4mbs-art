@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { WidgetsModule } from "src/app/widgets/widgets.module";
 import { PHPExpertiseIntroComponent } from "./partials/expertise-intro/expertise-intro.component";
 import { PHPAboutCraftingComponent } from "./partials/about-crafting/about-crafting.component";
+import { PageHomeComponentShareImagesService } from "./services/page-home-share-images.service";
 
 @NgModule({
     declarations: [
@@ -14,6 +15,9 @@ import { PHPAboutCraftingComponent } from "./partials/about-crafting/about-craft
     imports: [
       CommonModule,
       WidgetsModule
+    ],
+    providers :[
+      PageHomeComponentShareImagesService
     ],
     exports: [
       PHPExpertiseIntroComponent,

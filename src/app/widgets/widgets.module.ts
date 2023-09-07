@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { WImageDisplayComponent } from "./image-display/image-display.component";
 import { CloudinaryModule } from "@cloudinary/ng";
 import { WHeroComponent } from "./hero/hero.component";
+import { WTimelineComponent } from "./timeline/timeline-component";
 
 @NgModule({
   declarations: [
     WFooterComponent,
     WImageDisplayComponent,
-    WHeroComponent
+    WHeroComponent,
+    WTimelineComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { WHeroComponent } from "./hero/hero.component";
   exports : [
     WFooterComponent,
     WImageDisplayComponent,
-    WHeroComponent
+    WHeroComponent,
+    WTimelineComponent
   ]
 })
 export class WidgetsModule {}

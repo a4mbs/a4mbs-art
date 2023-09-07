@@ -1,0 +1,14 @@
+.text-inverse {
+  @apply
+    text-slate-50;
+}
+
+a.text-inverse {
+  @apply
+    text-slate-50;
+}
+
+a.text-inverse:hover {
+  @apply
+    text-slate-50;
+}

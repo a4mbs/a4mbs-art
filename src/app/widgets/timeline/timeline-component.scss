@@ -1,0 +1,288 @@
+/* I am using Tailwind in this project, and Tailwind recommended not using SASS, but this stylesheet is very complex, and I don't want to rewrite it in Tailwind. So I am using SASS for this stylesheet only.
+step 1. npm install -g sass
+step 2. open the terminal and run sass --watch src/app/widgets/timeline/timeline-component.scss src/app/widgets/timeline/timeline-component.css
+step 2'. open the terminal in the component folder and run sass --watch timeline-component.scss timeline-component.css
+*/
+
+$border-radius: 20px;
+$width-line: 10px;
+$circle-radius: 40px;
+$arrow-height: 10px;
+$line-height: 110%;
+$line-top: -8%;
+
+$arrow-length: 16px;
+$new-arrow-length: 2 * $arrow-length;
+$new-arrow-height: 2.5 * $arrow-length;
+
+
+$arrow-length-sm: 8px; 
+$new-arrow-length-sm: 2 * $arrow-length-sm;
+$new-arrow-height-sm: 2.5 * $arrow-length-sm;
+
+
+
+.timeline-left-first {
+  position: relative;
+
+  //This is the vertical line
+  &:before {
+    content: "";    
+    width: $width-line;
+    height: $line-height;
+    top: $line-top;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .timeline-img {
+      width: $circle-radius;
+      height: $circle-radius;
+      // background: $a4mbs-primary;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 25px; 
+    }
+
+    .timeline-content {
+      position: relative;
+      width: 45%;
+      padding: 20px;
+      border-radius: $border-radius;
+ 
+      &::after {
+        content: "";
+        position: absolute;
+        width: $new-arrow-length; 
+        height: $new-arrow-height; 
+        top: calc(45px - (#{$new-arrow-height} / 2));
+        right: -2 * $arrow-length + 2px;
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+      }
+    }
+
+    //The arrow style
+    &:nth-child(even) .timeline-content {
+      float: right;
+    
+      &::after {
+        content: "";
+        position: absolute;
+        width: $new-arrow-length; 
+        height: $new-arrow-height; 
+        top: calc(45px - (#{$new-arrow-height} / 2)); 
+        left: -2 * $arrow-length + 2px; 
+        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);         
+      }
+    }
+  }
+}
+
+
+.timeline-right-first {
+  position: relative;
+
+  //This is the vertical line
+  &:before {
+    content: "";    
+    width: $width-line;
+    height: $line-height;
+    top: $line-top;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .timeline-img {
+      width: $circle-radius;
+      height: $circle-radius;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 25px; 
+    }
+
+    .timeline-content {
+      position: relative;
+      width: 45%;
+      padding: 20px;
+      border-radius: $border-radius;
+ 
+      &::after {
+        content: "";
+        position: absolute;
+        width: $new-arrow-length; 
+        height: $new-arrow-height; 
+        top: calc(45px - (#{$new-arrow-height} / 2)); 
+        right: -2 * $arrow-length + 2px; 
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%); 
+      }
+    }
+
+    //The arrow style
+    &:nth-child(odd) .timeline-content {
+      float: right;
+    
+      &::after {
+        content: "";
+        position: absolute;
+        width: $new-arrow-length; 
+        height: $new-arrow-height; 
+        top: calc(45px - (#{$new-arrow-height} / 2)); 
+        left: -2 * $arrow-length + 2px; 
+        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);         
+      }
+    }
+  }
+}
+
+.timeline-left {
+  position: relative;
+
+//This is the vertical line
+  &:before {
+    content: "";
+    width: $width-line;
+    height: $line-height;
+    top: $line-top;
+    position: absolute;
+    right: 0%;
+    transform: translateX(50%);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .timeline-img {
+      width: $circle-radius;
+      height: $circle-radius;
+      border-radius: 50%;
+      position: absolute;
+      right: 0%;
+      transform: translateX(50%);
+      top: 25px;
+    }
+
+    .timeline-content {
+      position: relative;
+      width: 95%;
+      padding: 20px;  
+      border-radius: $border-radius;
+      float: left;
+
+      // Arrow style
+      &::after {
+        content: "";
+        position: absolute;
+        width: $new-arrow-length-sm; 
+        height: $new-arrow-height-sm; 
+        top: calc(45px - (#{$new-arrow-height-sm} / 2)); 
+        right: -2 * $arrow-length-sm + 2px; 
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%); 
+      }
+    }
+  }
+}
+
+
+.timeline-right {
+  position: relative;
+
+//This is the vertical line
+  &:before {
+    content: "";
+    width: $width-line;
+    height: $line-height;
+    top: $line-top;
+    position: absolute;
+    left: 0%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .timeline-img {
+      width: $circle-radius;
+      height: $circle-radius;
+      border-radius: 50%;
+      position: absolute;
+      left: 0%;
+      transform: translateX(-50%);
+      top: 25px;
+    }
+
+    .timeline-content {
+      position: relative;
+      width: 95%;
+      padding: 20px;
+      border-radius: $border-radius;
+      float: right;
+
+      
+      &::after {
+        content: "";
+        position: absolute;
+        width: $new-arrow-length-sm; 
+        height: $new-arrow-height-sm; 
+        top: calc(45px - (#{$new-arrow-height-sm} / 2)); 
+        left: -2 * $arrow-length-sm + 2px; 
+        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);         
+      }
+    }
+  }
+}
