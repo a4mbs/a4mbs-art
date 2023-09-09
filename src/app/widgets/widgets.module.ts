@@ -1,27 +1,17 @@
-import { NgModule } from "@angular/core";
-import { WFooterComponent } from "./footer/footer.component";
+//define a module for the widgets
 import { CommonModule } from '@angular/common';
-import { WImageDisplayComponent } from "./image-display/image-display.component";
-import { CloudinaryModule } from "@cloudinary/ng";
-import { WHeroComponent } from "./hero/hero.component";
-import { WTimelineComponent } from "./timeline/timeline-component";
+import { NgModule } from '@angular/core';
+import { wTimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
-    WFooterComponent,
-    WImageDisplayComponent,
-    WHeroComponent,
-    WTimelineComponent
+    wTimelineComponent
   ],
   imports: [
     CommonModule,
-    CloudinaryModule   
   ],
-  exports : [
-    WFooterComponent,
-    WImageDisplayComponent,
-    WHeroComponent,
-    WTimelineComponent
+  exports: [
+    wTimelineComponent
   ]
 })
-export class WidgetsModule {}
+export class WidgetsModule { }

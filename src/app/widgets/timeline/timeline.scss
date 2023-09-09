@@ -1,17 +1,16 @@
-/* I am using Tailwind in this project, and Tailwind recommended not using SASS, but this stylesheet is very complex, and I don't want to rewrite it in Tailwind. So I am using SASS for this stylesheet only.
-step 1. npm install -g sass
-step 2. open the terminal and run sass --watch src/app/widgets/timeline/timeline-component.scss src/app/widgets/timeline/timeline-component.css
-step 2'. open the terminal in the component folder and run sass --watch timeline-component.scss timeline-component.css
+/* I am using Tailwind in this project, and Tailwind recommended not using SASS, but this stylesheet is complex, and I don't want to rewrite it in Tailwind. So I am using SASS for this stylesheet only.
+Compile it using https://www.sassmeister.com/ and copy/paste the result in styles.css
 */
 
-$border-radius: 20px;
-$width-line: 10px;
-$circle-radius: 40px;
-$arrow-height: 10px;
-$line-height: 110%;
-$line-top: -8%;
 
-$arrow-length: 16px;
+$border-radius: 20px;
+$width-line: 8px;
+$circle-radius: 30px;
+$arrow-height: 10px;
+$line-height: 100%;
+$line-top: 0%;
+
+$arrow-length: 10px;
 $new-arrow-length: 2 * $arrow-length;
 $new-arrow-height: 2.5 * $arrow-length;
 
@@ -19,6 +18,26 @@ $new-arrow-height: 2.5 * $arrow-length;
 $arrow-length-sm: 8px; 
 $new-arrow-length-sm: 2 * $arrow-length-sm;
 $new-arrow-height-sm: 2.5 * $arrow-length-sm;
+
+$item-width: 45%;
+$item-width-sm: 90%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -63,8 +82,7 @@ $new-arrow-height-sm: 2.5 * $arrow-length-sm;
 
     .timeline-content {
       position: relative;
-      width: 45%;
-      padding: 20px;
+      width: $item-width;
       border-radius: $border-radius;
  
       &::after {
@@ -94,6 +112,29 @@ $new-arrow-height-sm: 2.5 * $arrow-length-sm;
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .timeline-right-first {
@@ -136,8 +177,7 @@ $new-arrow-height-sm: 2.5 * $arrow-length-sm;
 
     .timeline-content {
       position: relative;
-      width: 45%;
-      padding: 20px;
+      width: $item-width;
       border-radius: $border-radius;
  
       &::after {
@@ -167,6 +207,24 @@ $new-arrow-height-sm: 2.5 * $arrow-length-sm;
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .timeline-left {
   position: relative;
@@ -208,8 +266,7 @@ $new-arrow-height-sm: 2.5 * $arrow-length-sm;
 
     .timeline-content {
       position: relative;
-      width: 95%;
-      padding: 20px;  
+      width: 95$item-width-sm;
       border-radius: $border-radius;
       float: left;
 
@@ -226,6 +283,30 @@ $new-arrow-height-sm: 2.5 * $arrow-length-sm;
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .timeline-right {
@@ -268,8 +349,7 @@ $new-arrow-height-sm: 2.5 * $arrow-length-sm;
 
     .timeline-content {
       position: relative;
-      width: 95%;
-      padding: 20px;
+      width: $item-width-sm;
       border-radius: $border-radius;
       float: right;
 

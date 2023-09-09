@@ -1,12 +1,14 @@
- <div class="flex flex-col h-screen">
-  <div class="flex-grow mb-32" >
-    <router-outlet></router-outlet>
-    <button class="fixed right-4 bottom-4 btn-outline-primary text-4xl w-14 h-14 p-0 m-0 rounded-full" (click)="scrollToTop()" *ngIf="showScrollButton">
-      <i class='bx bx-chevron-up'></i>
-    </button>
-  </div>
-  <footer>
-    <w-footer></w-footer>
-  </footer>
-</div>
+
+<w-timeline 
+    timelineColor="warning" 
+    elementColor="light-alternative">
+    <ng-container *ngFor="let item of timelineContent">
+      <ng-template #timelineElement>
+        <h6>{{item.step}}</h6>
+        <h3 class="mb-3">{{item.title}}</h3>
+        <p [innerHTML]="item.content"></p>
+      </ng-template>
+    </ng-container>
+</w-timeline>
+
 

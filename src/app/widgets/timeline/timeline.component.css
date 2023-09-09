@@ -1,16 +1,14 @@
-/* I am using Tailwind in this project, and Tailwind recommended not using SASS, but this stylesheet is very complex, and I don't want to rewrite it in Tailwind. So I am using SASS for this stylesheet only.
-step 1. npm install -g sass
-step 2. open the terminal and run sass --watch src/app/widgets/timeline/timeline-component.scss src/app/widgets/timeline/timeline-component.css
-step 2'. open the terminal in the component folder and run sass --watch timeline-component.scss timeline-component.css
+/* I am using Tailwind in this project, and Tailwind recommended not using SASS, but this stylesheet is complex, and I don't want to rewrite it in Tailwind. So I am using SASS for this stylesheet only.
+Compile it using https://www.sassmeister.com/ and copy/paste the result in styles.css
 */
 .timeline-left-first {
   position: relative;
 }
 .timeline-left-first:before {
   content: "";
-  width: 10px;
-  height: 110%;
-  top: -8%;
+  width: 8px;
+  height: 100%;
+  top: 0%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -28,8 +26,8 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
   clear: both;
 }
 .timeline-left-first .timeline-item .timeline-img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -39,16 +37,15 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 .timeline-left-first .timeline-item .timeline-content {
   position: relative;
   width: 45%;
-  padding: 20px;
   border-radius: 20px;
 }
 .timeline-left-first .timeline-item .timeline-content::after {
   content: "";
   position: absolute;
-  width: 32px;
-  height: 40px;
-  top: calc(45px - (40px / 2));
-  right: -30px;
+  width: 20px;
+  height: 25px;
+  top: calc(45px - (25px / 2));
+  right: -18px;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 .timeline-left-first .timeline-item:nth-child(even) .timeline-content {
@@ -57,10 +54,10 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 .timeline-left-first .timeline-item:nth-child(even) .timeline-content::after {
   content: "";
   position: absolute;
-  width: 32px;
-  height: 40px;
-  top: calc(45px - (40px / 2));
-  left: -30px;
+  width: 20px;
+  height: 25px;
+  top: calc(45px - (25px / 2));
+  left: -18px;
   clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 }
 
@@ -69,9 +66,9 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 }
 .timeline-right-first:before {
   content: "";
-  width: 10px;
-  height: 110%;
-  top: -8%;
+  width: 8px;
+  height: 100%;
+  top: 0%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -89,8 +86,8 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
   clear: both;
 }
 .timeline-right-first .timeline-item .timeline-img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -100,16 +97,15 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 .timeline-right-first .timeline-item .timeline-content {
   position: relative;
   width: 45%;
-  padding: 20px;
   border-radius: 20px;
 }
 .timeline-right-first .timeline-item .timeline-content::after {
   content: "";
   position: absolute;
-  width: 32px;
-  height: 40px;
-  top: calc(45px - (40px / 2));
-  right: -30px;
+  width: 20px;
+  height: 25px;
+  top: calc(45px - (25px / 2));
+  right: -18px;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 .timeline-right-first .timeline-item:nth-child(odd) .timeline-content {
@@ -118,10 +114,10 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 .timeline-right-first .timeline-item:nth-child(odd) .timeline-content::after {
   content: "";
   position: absolute;
-  width: 32px;
-  height: 40px;
-  top: calc(45px - (40px / 2));
-  left: -30px;
+  width: 20px;
+  height: 25px;
+  top: calc(45px - (25px / 2));
+  left: -18px;
   clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 }
 
@@ -130,9 +126,9 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 }
 .timeline-left:before {
   content: "";
-  width: 10px;
-  height: 110%;
-  top: -8%;
+  width: 8px;
+  height: 100%;
+  top: 0%;
   position: absolute;
   right: 0%;
   transform: translateX(50%);
@@ -150,8 +146,8 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
   clear: both;
 }
 .timeline-left .timeline-item .timeline-img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
   right: 0%;
@@ -160,8 +156,7 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 }
 .timeline-left .timeline-item .timeline-content {
   position: relative;
-  width: 95%;
-  padding: 20px;
+  width: 95 90%;
   border-radius: 20px;
   float: left;
 }
@@ -180,9 +175,9 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 }
 .timeline-right:before {
   content: "";
-  width: 10px;
-  height: 110%;
-  top: -8%;
+  width: 8px;
+  height: 100%;
+  top: 0%;
   position: absolute;
   left: 0%;
   transform: translateX(-50%);
@@ -200,8 +195,8 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
   clear: both;
 }
 .timeline-right .timeline-item .timeline-img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
   left: 0%;
@@ -210,8 +205,7 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
 }
 .timeline-right .timeline-item .timeline-content {
   position: relative;
-  width: 95%;
-  padding: 20px;
+  width: 90%;
   border-radius: 20px;
   float: right;
 }
@@ -224,5 +218,3 @@ step 2'. open the terminal in the component folder and run sass --watch timeline
   left: -14px;
   clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 }
-
-/*# sourceMappingURL=timeline-component.css.map */

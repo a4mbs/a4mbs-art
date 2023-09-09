@@ -1,144 +1,55 @@
-/* import google fonts and boxicons */
-@import 'boxicons/css/boxicons.min.css'; /* import boxicons */
-@import '../a4mbs-config/a4mbs-fonts.config.css'; /* import Google fonts */
-
-/* import tailwindcss */
-/* How to Fix unknownAtRules Warnings From Tailwind CSS: https://www.codeconcisely.com/posts/tailwind-css-unknown-at-rules/ */
+@import "~@flaticon/flaticon-uicons/css/all/all";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/*this won't work when using @import */
 @layer base {
-
-  /* these classes doesn't work when there are in an external file they must be declared on base layer */
-  .typography-size-base {
-    @apply
-      lg:text-xl
-      md:text-lg
-      text-base
-  }
-  
-  .typography-size-sm {
-    @apply
-      lg:text-base
-      md:text-sm
-      text-xs
-  }
-  
-
   * {
-    transition: all 0.3s ease-in-out !important;
+    transition: all 0.4s ease-in-out !important;
+    /* @apply
+      leading-loose; */
   }
-
+  body * {
+    @apply
+     leading-relaxed;
+  }
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
   }
-  
-  body {
-    @apply
-      leading-relaxed
-      typography-size-base
-      text-slate-950
-      font-sans;
-  }
-  
-  footer {
-    @apply
-      typography-size-sm;
-  }
-
-  footer a, footer button {
-    @apply
-      typography-size-sm;
-  }
-
-  button, a {
-    @apply
-      typography-size-base;
-  }
-
   h1, h2, h3 {
     @apply
-      font-serif
-      font-semibold;
+      font-serif;
   }
-
-  h1 {
+  h3 {
     @apply
-      lg:text-8xl      
-      md:text-7xl
-      text-6xl;     
-  }
-
-  h2 {
-    @apply
-      lg:text-6xl
-      md:text-5xl
-      text-4xl;     
-  }
-
-  h3  {
-      @apply
-        lg:text-5xl
-        md:text-4xl
-        text-3xl;       
-    }
-
-
-  h4, h5, h6 {
-    @apply
-      font-special-alternate;
-  }
-  
-  h4 {
-    @apply 
-      lg:text-4xl
-      md:text-3xl
-      text-2xl
-      font-bold;    
-  }
-  
-  h5 {
-    @apply 
-      lg:text-2xl
-      md:text-xl
-      text-lg
-      font-semibold;
-  }
-  
-  h6 {
-    @apply 
-      lg:text-lg
-      md:text-base
-      text-sm
-      font-semibold;
-  }
-  
-  p, ul {
-    @apply
-      mb-8;
-  }
-  
-  li {
-    @apply
-      mb-3;      
-  }
-
-  a {
-    @apply
-      text-success-default
-      hover:text-success-dark
-      transition-colors
       font-semibold
-      no-underline
-      hover:underline;   
+      lg:text-2xl
+      text-xl;
+  }
+  h6 {
+    @apply
+      font-special
+      font-semibold
+      uppercase
+      lg:text-base
+      text-sm;
   }
 
 }
+@tailwind components;
+@layer components {
+  .btn {
+    @apply font-medium 
+      rounded-lg 
+      text-sm 
+      px-5 
+      py-2.5 
+      mr-2 
+      mb-2;
+  }
 
-@import './widgets/buttons-outline.css'; /* import buttons outline */
-@import './widgets/buttons.css'; /* import buttons */
-@import './widgets/containers.css'; /* import containers */
-@import './widgets/typography.css'; /* import typography */
+}
+@tailwind utilities;
