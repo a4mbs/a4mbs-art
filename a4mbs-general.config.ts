@@ -30,32 +30,32 @@ export const A4MBS_CONFIG = {
   socialMedia: [
     {
       title: 'Behance',
-      icon: 'bxl-behance',
+      icon: 'behance',
       link: 'https://www.behance.net/a4mbs',
     },
     {
       title: 'Facebook',
-      icon: 'bxl-facebook',
+      icon: 'facebook',
       link: 'https://www.facebook.com/a4mbs',
     },
     {
       title: 'Twitter',
-      icon: 'bxl-twitter',
+      icon: 'twitter',
       link: 'https://twitter.com/a4mbs82',
     },
     {
       title: 'Instagram',
-      icon: 'bxl-instagram',
+      icon: 'instagram',
       link: 'https://www.instagram.com/a4mbs82',
     },
     {
       title: 'ArtStation',
-      icon: 'bx-paint',
+      icon: 'artstation',
       link: 'https://www.artstation.com/a4mbs',
     },
     {
       title: 'LinkedIn',
-      icon: 'bxl-linkedin',
+      icon: 'linkedin',
       link: 'https://www.linkedin.com/in/a4mbs',
     } 
   ],

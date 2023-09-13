@@ -7,27 +7,59 @@
 
 @tailwind base;
 @layer base {
+
   * {
     transition: all 0.4s ease-in-out !important;
-    /* @apply
-      leading-loose; */
   }
-  body * {
+  body {
     @apply
-     leading-relaxed;
+      font-sans 
+      text-sm 
+      lg:text-base 
+      text-dark
+      lg:leading-loose
+      leading-relaxed;
   }
   html {
     scroll-behavior: smooth;    
   }
   h1, h2, h3 {
     @apply
+      leading-normal
       font-serif;
+  }
+  h1 {
+    @apply
+      font-semibold
+      lg:text-6xl
+      text-5xl;
+  }
+  h2 {
+    @apply
+      font-semibold
+      lg:text-5xl
+      text-4xl;
   }
   h3 {
     @apply
       font-semibold
-      lg:text-2xl
-      text-xl;
+      lg:text-3xl
+      text-2xl;
+  } 
+  h4, h5 {
+    @apply
+    font-sans
+    font-semibold;
+  }
+  h4 {
+    @apply
+      lg:text-5xl
+      text-4xl;
+  }
+  h5 {
+    @apply
+      lg:text-3xl
+      text-2xl;
   }
   h6 {
     @apply
@@ -37,6 +69,21 @@
       lg:text-base
       text-sm;
   }
+  a {
+    @apply
+      font-bold
+      no-underline
+      text-primary-500
+      hover:underline;      
+  }
+  footer {
+    @apply
+      text-sm;
+  }
+  footer a {
+    @apply
+      text-warning;
+  }
 
 }
 @tailwind components;
@@ -44,12 +91,10 @@
   .btn {
     @apply font-medium 
       rounded-lg 
-      text-sm 
       px-5 
       py-2.5 
       mr-2 
       mb-2;
   }
-
 }
 @tailwind utilities;

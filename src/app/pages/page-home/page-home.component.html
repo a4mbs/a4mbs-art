@@ -1,0 +1,27 @@
+<header class="mb-24">
+  <w-hero    
+    [title]="title"
+    [subtitle]="subtitle"
+    [fullHeight]="true"
+    [heroImageResource]="homePageHeroImageURL"
+  ></w-hero>
+</header>
+<section>
+  <php-expertise-intro></php-expertise-intro>
+</section>
+<section>
+  <php-about-crafting></php-about-crafting>
+</section>
+<section>
+  <w-timeline 
+    timelineColor="warning" 
+    elementColor="light-alternative">
+    <ng-container *ngFor="let item of timelineContent">
+      <ng-template #timelineElement>
+        <h6>{{item.step}}</h6>
+        <h3 class="mb-4">{{item.title}}</h3>
+        <p [innerHTML]="item.content"></p>
+      </ng-template>
+    </ng-container>
+</w-timeline> 
+</section>
