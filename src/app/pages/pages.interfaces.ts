@@ -6,7 +6,15 @@ import {
   iFeaturesList, 
   iCallToAction } from '../widgets/widgets.interfaces';
 
-type tWidgets = 'hero' | 'iconAndContentWith2Buttons' | 'featureWithImageOnTheLeftAndBulletPoints' | 'alternatedTimeline' | 'alternatedFeatureWithImagesAndText' | 'featuresList' | 'galleryOfFour' | 'galleryOfTThere' | 'callToAction';
+type tWidgets = 'hero' | 
+    'iconAndContentWithTwoButtons' | 
+    'featureWithImageOnTheLeftAndBulletPoints' | 
+    'alternatedTimeline' | 
+    'alternatedFeatureWithImagesAndText' | 
+    'featuresList' | 
+    'galleryOfFour' | 
+    'galleryOfTThere' | 
+    'callToAction';
 
 interface iPageHomeContent {
   sections: [

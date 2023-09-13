@@ -9,7 +9,7 @@ interface iComponentMapping {
 
 
 @Injectable()
-export class PageHomeContentService {
+export class HomepageContentService {
 
   pageContent: iPageHomeContent;
 
@@ -36,7 +36,7 @@ export class PageHomeContentService {
         }, 
         //section 2
         {
-          type: 'iconAndContentWith2Buttons',
+          type: 'iconAndContentWithTwoButtons',
           sectionContent: {
             image: {
               path: this.websiteConfigService.getBranding().logoResources.color,

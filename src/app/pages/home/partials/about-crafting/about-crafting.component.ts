@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { iDisplayImage } from "src/app/widgets/widgets.interfaces";
-import { PageHomeContentService } from "../../services/home-content.service";
+import { HomepageContentService } from "../../services/home-content.service";
 
 @Component({
   selector: 'php-about-crafting',
@@ -11,7 +11,7 @@ export class phpAboutCraftingComponent {
 
   image!: iDisplayImage;
 
-  constructor(private homepageContentService: PageHomeContentService) {}
+  constructor(private homepageContentService: HomepageContentService) {}
 
   ngOnInit(): void {
     this.image = this.homepageContentService.getImagesForComponent();
