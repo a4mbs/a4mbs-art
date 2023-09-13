@@ -6,13 +6,13 @@
         <div class="hidden 2xl:block">
           <span class="flex flex-col items-start">
             <a href="/" class="hover:scale-110">
-              <w-image-display 
+              <w-display-image 
                   class="mr-3 hidden md:block"
                   width="150"
                   height="150"
                   [displayAsCircle]="true"
                   [imagePath]="getLogoResource()"
-              ></w-image-display>
+              ></w-display-image>
             </a>
             <span class="font-serif self-center text-2xl font-semibold whitespace-nowrap hidden">{{getWebsiteTitle()}}</span>
           </span>
@@ -21,13 +21,13 @@
         <div class="block 2xl:hidden">
           <div class="flex flex-col items-center">
             <a href="/" class="hover:scale-110">
-              <w-image-display 
+              <w-display-image 
                   class="mb-0"
                   width="150"
                   height="150"                 
                   [displayAsCircle]="true"
                   [imagePath]="getLogoResource()"
-              ></w-image-display>
+              ></w-display-image>
             </a>          
             <h4 class="font-serif font-semibold whitespace-nowrap">{{getWebsiteTitle()}}</h4>
           </div>

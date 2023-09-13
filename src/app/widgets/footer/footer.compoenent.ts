@@ -21,7 +21,7 @@ export class wFooterComponent {
   } 
 
   getWebsiteTitle(): string {
-    return this.websiteConfigService.getWebsiteSettings().title;
+    return this.websiteConfigService.getBranding().title;
   }
 
   getWebsiteURL(): string {
@@ -29,7 +29,7 @@ export class wFooterComponent {
   }
 
   getShortTitle(): string {
-    return this.websiteConfigService.getWebsiteSettings().shortTitle;
+    return this.websiteConfigService.getBranding().shortTitle;
   }
 
   getSocialMediaResources(): Array<iSocialMedia> {

@@ -1,14 +1,14 @@
 import { NgModule } from "@angular/core";
-import { PageHomeComponent } from "./page-home.component";
 import { CommonModule } from "@angular/common";
 import { WidgetsModule } from "src/app/widgets/widgets.module";
-import { PageHomeComponentShareImagesService } from "./services/page-home-share-images.service";
 import { phpAboutCraftingComponent } from "./partials/about-crafting/about-crafting.component";
 import { phpExpertiseIntroComponent } from "./partials/expertise-intro/expertise-intro.component";
+import { pHomeComponent } from "./home.component";
+import { PageHomeContentService } from "./services/home-content.service";
 
 @NgModule({
     declarations: [
-      PageHomeComponent,
+      pHomeComponent,
       phpExpertiseIntroComponent,
       phpAboutCraftingComponent
     ],
@@ -17,12 +17,12 @@ import { phpExpertiseIntroComponent } from "./partials/expertise-intro/expertise
       WidgetsModule
     ],
     providers :[
-      PageHomeComponentShareImagesService
+      PageHomeContentService
     ],
     exports: [
       phpAboutCraftingComponent,
       phpExpertiseIntroComponent,      
-      PageHomeComponent
+      pHomeComponent
     ],
 })
-export class PageHomeModule {}
+export class HomepageModule {}

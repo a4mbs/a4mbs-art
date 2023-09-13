@@ -29,7 +29,7 @@ export class UpdateTitleService {
     )
     .subscribe((event) => {
       const title = event['title'] ? 
-        `${this.websiteConfigService.getWebsiteSettings().shortTitle} - ${event['title']}` : `${this.websiteConfigService.getWebsiteSettings().title}`;
+        `${this.websiteConfigService.getBranding().shortTitle} - ${event['title']}` : `${this.websiteConfigService.getBranding().title}`;
       this.titleService.setTitle(title);
     });
   }

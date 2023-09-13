@@ -3,16 +3,16 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { wTimelineComponent } from './timeline/timeline.component';
 import { wFooterComponent } from './footer/footer.compoenent';
-import { wImageDisplayComponent } from './imagine-display/image-display.component';
+import { wDisplayImageComponent } from './display-image/display-image.component';
 import { CloudinaryModule } from "@cloudinary/ng";
 import { wHeroComponent } from './hero/hero.component';
 
 
 @NgModule({
   declarations: [
+    wDisplayImageComponent,
     wTimelineComponent,
     wFooterComponent,
-    wImageDisplayComponent,
     wHeroComponent
   ],
   imports: [
@@ -20,9 +20,9 @@ import { wHeroComponent } from './hero/hero.component';
     CloudinaryModule   
   ],
   exports: [
+    wDisplayImageComponent,
     wTimelineComponent,
     wFooterComponent,
-    wImageDisplayComponent,
     wHeroComponent
   ]
 })

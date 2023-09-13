@@ -4,11 +4,11 @@ import { MediaResolverService } from 'src/app/services/media-resolver.service';
 import { WebsiteConfigService, iCDNService } from 'src/app/services/website-config.service';
 
 @Component({
-  selector: 'w-image-display',
-  templateUrl: './image-display.component.html',
+  selector: 'w-display-image',
+  templateUrl: './display-image.component.html',
   styles: []
 })
-export class wImageDisplayComponent implements OnInit{
+export class wDisplayImageComponent implements OnInit{
   @Input() imagePath!: string;
   @Input() imageAlt!: string;
   @Input() displayAsCircle?: boolean;

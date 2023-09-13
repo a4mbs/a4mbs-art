@@ -1,5 +1,5 @@
 //define a component for the timeline widget
-import { Component, ContentChildren, HostListener, Input, OnInit, QueryList, TemplateRef } from '@angular/core';
+import { Component, ContentChildren, HostListener, Input, QueryList, TemplateRef } from '@angular/core';
 
 interface iResponsiveStyle {
   small?: string;
@@ -21,10 +21,6 @@ export class wTimelineComponent  {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     //This will trigger the change detection
-  }
-
-  ngAfterContentInit() {
-    console.log(this.timelineItems);
   }
 
   private getTimelineStyle(style?: string): string {   

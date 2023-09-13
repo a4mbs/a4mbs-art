@@ -2,10 +2,8 @@ import { Injectable } from '@angular/core';
 import  { A4MBS_CONFIG } from '../../../a4mbs-general.config';
 
 interface iWebsiteSettings {
-  title: string;
-  shortTitle: string;
-  motto: string;
   URL: string;
+  CDN: iCDN;
 }
 
 interface iLogoResources {
@@ -17,6 +15,9 @@ interface iLogoResources {
 }
 
 interface iBranding {
+  title: string;
+  shortTitle: string;
+  motto: string;
   heroImageResource: string;
   logoResources: iLogoResources;
 }
@@ -54,8 +55,7 @@ interface iA4MBSConfig {
   branding: iBranding;
   socialMedia: Array<iSocialMedia>;
   stockImages: Array<iSellingMedia>;
-  printOnDemand: Array<iSellingMedia>;
-  CDN: iCDN;
+  printOnDemand: Array<iSellingMedia>;  
   legalDetails: iLegalDetails; 
 }
 
@@ -86,7 +86,7 @@ class WebsiteConfigService {
   }
 
   getCDN(): iCDNService {
-    return this.config.CDN.services[this.config.CDN.currentServiceIndex];
+    return this.config.websiteSettings.CDN.services[this.config.websiteSettings.CDN.currentServiceIndex];
   }
 
   getLegalDetails(): iLegalDetails {

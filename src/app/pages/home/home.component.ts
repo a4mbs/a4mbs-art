@@ -3,11 +3,11 @@ import { WebsiteConfigService } from 'src/app/services/website-config.service';
 import { phpAboutCraftingComponent } from './partials/about-crafting/about-crafting.component';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: './page-home.component.html',
+  selector: 'pag-home',
+  templateUrl: './home.component.html',
   styles: []  
 })
-export class PageHomeComponent {
+export class pHomeComponent {
 
   timelineContent = [
     {
@@ -39,8 +39,8 @@ export class PageHomeComponent {
 
 
   constructor(private websiteConfigService: WebsiteConfigService) {
-    this.title = this.websiteConfigService.getWebsiteSettings().title;
-    this.subtitle = this.websiteConfigService.getWebsiteSettings().motto;
+    this.title = this.websiteConfigService.getBranding().title;
+    this.subtitle = this.websiteConfigService.getBranding().motto;
     this.homePageHeroImageURL = this.websiteConfigService.getBranding().heroImageResource;
   }
  

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { bpPrivacyPolicyComponent } from './pages/basic-pages/privacy-policy/privacy-policy.component';
-import { bpTermsOfUseComponent } from './pages/basic-pages/terms-of-use/terms-of-use.component';
-import { PageHomeComponent } from './pages/page-home/page-home.component';
+import { pHomeComponent } from './pages/home/home.component';
+import { pPrivacyPolicyComponent } from './pages/misc/privacy-policy/privacy-policy.component';
+import { pTermsOfUseComponent } from './pages/misc/terms-of-use/terms-of-use.component';
 
 const routes: Routes = [
   {
     path:'', 
-    component: PageHomeComponent,
+    component: pHomeComponent,
     data: { title: '' }
   },
   // {
@@ -16,12 +16,12 @@ const routes: Routes = [
   // },
   {
     path:'privacy-policy',
-    component: bpPrivacyPolicyComponent,
+    component: pPrivacyPolicyComponent,
     data: { title: 'Privacy Policy' }
   },
   {
     path:'terms-of-use',
-    component: bpTermsOfUseComponent,
+    component: pTermsOfUseComponent,
     data: { title: 'Terms of Use' }
   }
 ];

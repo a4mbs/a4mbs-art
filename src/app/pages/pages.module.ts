@@ -1,24 +1,24 @@
 import { NgModule } from "@angular/core";
-import { bpPrivacyPolicyComponent } from "./basic-pages/privacy-policy/privacy-policy.component";
-import { bpTermsOfUseComponent } from "./basic-pages/terms-of-use/terms-of-use.component";
-import { PageHomeModule } from "./page-home/page-home.module";
+import { pPrivacyPolicyComponent } from "./misc/privacy-policy/privacy-policy.component";
+import { pTermsOfUseComponent } from "./misc/terms-of-use/terms-of-use.component";
 import { CommonModule } from "@angular/common";
 import { WidgetsModule } from "../widgets/widgets.module";
+import { HomepageModule } from "./home/home.module";
 
 @NgModule({
   declarations: [
-    bpPrivacyPolicyComponent,
-    bpTermsOfUseComponent
+    pPrivacyPolicyComponent,
+    pTermsOfUseComponent
   ],
   imports: [
     CommonModule,
-    PageHomeModule,
+    HomepageModule,
     WidgetsModule
   ],
   exports : [
-    bpPrivacyPolicyComponent,
-    bpTermsOfUseComponent,
-    PageHomeModule
+    pPrivacyPolicyComponent,
+    pTermsOfUseComponent,
+    HomepageModule
   ]
 })
 export class PagesModule {}

@@ -1,16 +1,16 @@
 <div class="max-w-7xl mx-auto min-w-[400px] py-10 px-10 lg:px-0 flex flex-col-reverse md:flex-row items-center">
   <div class="md:w-1/2 flex justify-center items-center">
-      <w-image-display 
-        [imagePath]="images[0].path"   
+      <w-display-image
+        [imagePath]="image.image.path"   
         [hasOverlay]="true"
-        [overlayTitle]="images[0].caption"
-        [overlaySubtitle]="images[0].details"
+        [overlayTitle]="image.text.title"
+        [overlaySubtitle]="image.text.content"
         [overlayHasLinkButton]="true"
-        [overlayLinkButtonLabel]="images[0].overlayButtonTitle"
-        [overlayLinkButtonURL]="images[0].overlayButtonLink"   
+        [overlayLinkButtonLabel]="image.button?.title"
+        [overlayLinkButtonURL]="image.button?.link"   
         class="md:shadow-[-1.5rem_1.5rem] 
         md:shadow-light-100">
-      </w-image-display>      
+      </w-display-image>      
    </div>
   <div class="md:w-1/2 ms-10">
 
