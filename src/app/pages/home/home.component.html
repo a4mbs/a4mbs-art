@@ -26,4 +26,29 @@
 </w-timeline> 
 </section> -->
 
-{{getHomeContent() | json}}
+<ng-container *ngFor="let item of getSections()">
+  <ng-container [ngSwitch]="item">
+    <w-hero 
+      *ngSwitchCase="'hero'"
+      [title]="getHeroContent().text.title"
+      [subtitle]="getHeroContent().text.content"
+      [fullHeight]="true"
+      [heroImageResource]="getHeroContent().image.path">
+    </w-hero>
+    <w-timeline 
+      *ngSwitchCase="'alternatedTimeline'"
+      timelineColor="warning" 
+      elementColor="light-alternative">
+      <ng-container *ngFor="let item of getTimelineContent()">
+        <ng-template #timelineElement>
+          <h6>{{item.subtitle}}</h6>
+          <h3 class="mb-4">{{item.title}}</h3>
+          <p [innerHTML]="item.content"></p>
+        </ng-template>
+      </ng-container>
+    </w-timeline>
+    <w-gallery-of-three *ngSwitchCase="'galleryOfThere'"></w-gallery-of-three>
+    <w-gallery-of-four *ngSwitchCase="'galleryOfFour'"></w-gallery-of-four>
+  </ng-container>
+</ng-container>
+

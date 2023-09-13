@@ -1,10 +1,6 @@
 //define a component for the timeline widget
 import { Component, ContentChildren, HostListener, Input, QueryList, TemplateRef } from '@angular/core';
-
-interface iResponsiveStyle {
-  small?: string;
-  large?: string;
-}
+import { iResponsiveStyle } from 'src/project.interfaces';
 
 @Component({
   selector: 'w-timeline',
