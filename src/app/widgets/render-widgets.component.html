@@ -2,7 +2,7 @@
 
 
   <ng-container *ngSwitchCase="'hero'">
-    <header class="mb-24">
+    <header class="mb-10 lg:mb-20">
       <w-hero    
         [data]="this.heroData!"
         [fullHeight]="true"
@@ -24,21 +24,26 @@
 
 
   <ng-container *ngSwitchCase="'iconAndContentWithTwoButtons'">
-    <w-icon-and-content-with-two-buttons
-      [data]="this.iconAndContentWithTwoButtonsData!">      
-    </w-icon-and-content-with-two-buttons>
+    <section class="mb-20 lg:mb-32">
+      <w-icon-and-content-with-two-buttons
+        [data]="this.iconAndContentWithTwoButtonsData!">      
+      </w-icon-and-content-with-two-buttons>
+    </section>
   </ng-container>
 
 
 
   <ng-container *ngSwitchCase="'featureWithImageOnTheLeftAndBulletPoints'">
-    {{ this.featureWithImageOnTheLeftAndBulletPointsData | json }}
+    <section class="mb-20 lg:mb-32">
+       <w-feature-with-image-on-the-left-and-bullet-points
+       [data]="this.featureWithImageOnTheLeftAndBulletPointsData!">
+    </w-feature-with-image-on-the-left-and-bullet-points>
+    </section>   
   </ng-container>
 
 
-
   <ng-container *ngSwitchCase="'alternatedTimeline'">
-    <section>
+    <section class="mb-20 lg:mb-32">
       <w-timeline timelineColor="warning" elementColor="light-alternative">
         <ng-container *ngFor="let item of this.alternatedTimelineData">
           <ng-template #timelineElement>

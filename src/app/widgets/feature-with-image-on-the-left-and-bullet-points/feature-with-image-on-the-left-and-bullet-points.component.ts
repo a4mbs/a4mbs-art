@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { iStrctureWithHeroImageAndText } from 'src/project.interfaces';
 
 @Component({
   selector: 'w-feature-with-image-on-the-left-and-bullet-points',
@@ -6,4 +7,5 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class wFeatureWithImageOnTheLeftAndBulletPointsComponent {
+  @Input() data!: iStrctureWithHeroImageAndText;
 }

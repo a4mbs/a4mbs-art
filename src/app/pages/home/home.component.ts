@@ -1,9 +1,6 @@
-import { Component, ViewChild, ViewContainerRef, TemplateRef, AfterViewInit, createComponent } from '@angular/core';
+import { Component } from '@angular/core';
 import { HomepageContentService } from './home.content.service';
-import {  tWidgets, iDisplayImage, iText, iPageContent } from 'src/project.interfaces';
-import { wGalleryOfFourComponent } from 'src/app/widgets/gallery-of-four/gallery-of-four.component';
-import { wGalleryOfThreeComponent } from 'src/app/widgets/gallery-of-three/gallery-of-three.component';
-// import { WidgetsModule } from 'src/app/widgets/widgets.module';
+import {  tWidgets, iPageContent } from 'src/project.interfaces';
 
 @Component({
   selector: 'pag-home',
