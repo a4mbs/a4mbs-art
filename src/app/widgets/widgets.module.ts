@@ -13,6 +13,7 @@ import { wFeaturesListComponent } from './features-list/features-list.component'
 import { wGalleryOfFourComponent } from './gallery-of-four/gallery-of-four.component';
 import { wGalleryOfThreeComponent } from './gallery-of-three/gallery-of-three.component';
 import { wCallToActionComponent } from './call-to-action/call-to-action.component';
+import { RenderWidgetsComponent } from './render-widgets.component';
 
 const WIDGETS = [
   wDisplayImageComponent,
@@ -25,7 +26,8 @@ const WIDGETS = [
   wFeaturesListComponent,
   wGalleryOfFourComponent,
   wGalleryOfThreeComponent,
-  wCallToActionComponent
+  wCallToActionComponent,
+  RenderWidgetsComponent
 ];
 
 @NgModule({

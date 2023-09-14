@@ -1,0 +1,84 @@
+<ng-container [ngSwitch]="widgetType">
+
+
+  <ng-container *ngSwitchCase="'hero'">
+    <header class="mb-24">
+      <w-hero    
+        [data]="this.heroData!"
+        [fullHeight]="true"
+      ></w-hero>
+    </header>
+  </ng-container>
+
+
+
+  <ng-container *ngSwitchCase="'header'">
+    <header class="mb-24">
+      <w-hero    
+        [data]="this.headerData!"
+        [fullHeight]="false"
+      ></w-hero>
+    </header>
+  </ng-container>
+
+
+
+  <ng-container *ngSwitchCase="'iconAndContentWithTwoButtons'">
+    <w-icon-and-content-with-two-buttons
+      [data]="this.iconAndContentWithTwoButtonsData!">      
+    </w-icon-and-content-with-two-buttons>
+  </ng-container>
+
+
+
+  <ng-container *ngSwitchCase="'featureWithImageOnTheLeftAndBulletPoints'">
+    {{ this.featureWithImageOnTheLeftAndBulletPointsData | json }}
+  </ng-container>
+
+
+
+  <ng-container *ngSwitchCase="'alternatedTimeline'">
+    <section>
+      <w-timeline timelineColor="warning" elementColor="light-alternative">
+        <ng-container *ngFor="let item of this.alternatedTimelineData">
+          <ng-template #timelineElement>
+            <h6>{{item.subtitle}}</h6>
+            <h3 class="mb-4">{{item.title}}</h3>
+            <p [innerHTML]="item.content"></p>
+            </ng-template>
+          </ng-container>
+      </w-timeline> 
+    </section>
+  </ng-container>
+
+
+
+  <ng-container *ngSwitchCase="'alternatedFeatureWithImagesAndText'">
+    {{ this.alternatedFeatureWithImagesAndTextData | json }}
+  </ng-container>
+
+
+
+  <ng-container *ngSwitchCase="'featuresList'">
+    {{ this.featuresListData | json }}
+  </ng-container>
+
+
+
+  <ng-container *ngSwitchCase="'galleryOfFour'">
+    {{ this.galleryOfFourData | json }}
+  </ng-container>
+
+
+
+  <ng-container *ngSwitchCase="'galleryOfThree'">
+    {{ this.galleryOfThreeData | json }}
+  </ng-container>
+
+
+  <ng-container *ngSwitchCase="'callToAction'">
+    {{ this.callToActionData | json }}
+  </ng-container>
+</ng-container>
+
+

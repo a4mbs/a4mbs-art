@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { iDisplayImage } from "src/project.interfaces";
-import { HomepageContentService } from "../../services/home-content.service";
+import { HomepageContentService } from "../../home.content.service";
 
 @Component({
   selector: 'php-about-crafting',

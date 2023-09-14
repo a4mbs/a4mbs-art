@@ -1,18 +1,28 @@
 import { Injectable } from "@angular/core";
-import { WebsiteConfigService } from "../../../services/website-config.service";
-import { tWidgetsInterfaces, iHomepageContent, tWidgets, iDisplayImage, iText } from "src/project.interfaces";
-
-// interface iComponentMapping {
-//   [key: string]: Array<number>;
-// }
+import { WebsiteConfigService } from "../../services/website-config.service";
+import { iPageContent, tWidgets, iDisplayImage, iText, iStrctureWithHeroImageAndText, iStructreWtihIconAndText, iFeaturesList, iCallToAction } from "src/project.interfaces";
 
 @Injectable()
 export class HomepageContentService {
-  private pageContent: iHomepageContent;
+  private pageContent: iPageContent;
   pageSections: Array<tWidgets> ;
 
   constructor(private websiteConfigService: WebsiteConfigService) {
+
+  //this vector defines the order of the sections on the page
+  this.pageSections = [
+      "hero",
+      "iconAndContentWithTwoButtons",
+      "featureWithImageOnTheLeftAndBulletPoints",
+      "alternatedTimeline",
+      "alternatedFeatureWithImagesAndText",
+      "featuresList",
+      "galleryOfFour",
+      "galleryOfThree",
+      "callToAction"
+    ];
     
+    //the key of this object is the name of the section and must be the same as in this.pageSections
     this.pageContent = {
       //section 1
       hero: {
@@ -25,7 +35,7 @@ export class HomepageContentService {
           content: this.websiteConfigService.getBranding().motto,
         },
         button: {
-          title: "icon: fi fi-rs-arrow-down",
+          title: '<i class="fi fi-rs-arrow-down"></i>',
           method: "scrollingDown",
         },
       },
@@ -337,7 +347,7 @@ export class HomepageContentService {
         },
       ],
       //section 8
-      galleryOfTThere: [
+      galleryOfThree: [
         //image 1
         {
           image: {
@@ -415,54 +425,16 @@ export class HomepageContentService {
             .find((item) => item.title === "Behance")?.link,
         },
       },
-    };
-
-    this.pageSections = [
-      "hero",
-      "iconAndContentWithTwoButtons",
-      "featureWithImageOnTheLeftAndBulletPoints",
-      "alternatedTimeline",
-      "alternatedFeatureWithImagesAndText",
-      "featuresList",
-      "galleryOfFour",
-      "galleryOfThere",
-      "callToAction",
-    ];
+    };   
 
   }
 
   getSections(): Array<tWidgets> {
     return this.pageSections;
   }
-
-  getHeroSection(): iDisplayImage {
-    return this.pageContent.hero;
-  }
-  getTimelineSection(): Array<iText> {
-    return this.pageContent.alternatedTimeline;
-  }
-
-  getSectionContent(sectionId: tWidgets): tWidgetsInterfaces {
-    switch(sectionId) {
-      case "hero":
-        return this.pageContent.hero;
-      case "iconAndContentWithTwoButtons":  
-        return this.pageContent.iconAndContentWithTwoButtons;
-      case "featureWithImageOnTheLeftAndBulletPoints":
-        return this.pageContent.featureWithImageOnTheLeftAndBulletPoints;
-      case "alternatedTimeline":
-        return this.pageContent.alternatedTimeline;
-      case "alternatedFeatureWithImagesAndText":
-        return this.pageContent.alternatedFeatureWithImagesAndText;
-      case "featuresList":
-        return this.pageContent.featuresList;
-      case "galleryOfFour":
-        return this.pageContent.galleryOfFour;
-      case "galleryOfThere":
-        return this.pageContent.galleryOfTThere;
-      case "callToAction":
-        return this.pageContent.callToAction;
-    }
+    
+  getContent(): iPageContent {
+    return this.pageContent;
   }
 
 }

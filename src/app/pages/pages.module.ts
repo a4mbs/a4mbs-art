@@ -8,7 +8,7 @@ import { HomepageModule } from "./home/home.module";
 @NgModule({
   declarations: [
     pPrivacyPolicyComponent,
-    pTermsOfUseComponent
+    pTermsOfUseComponent,
   ],
   imports: [
     CommonModule,
@@ -18,7 +18,7 @@ import { HomepageModule } from "./home/home.module";
   exports : [
     pPrivacyPolicyComponent,
     pTermsOfUseComponent,
-    HomepageModule
+    HomepageModule,
   ]
 })
 export class PagesModule {}

@@ -1,35 +1,98 @@
-type tWidgets = 'hero' | 
-    'iconAndContentWithTwoButtons' | 
-    'featureWithImageOnTheLeftAndBulletPoints' | 
-    'alternatedTimeline' | 
-    'alternatedFeatureWithImagesAndText' | 
-    'featuresList' | 
-    'galleryOfFour' | 
-    'galleryOfThere' | 
-    'callToAction';
+/**
+/ Widgets 
+/**/
+type tWidgets = 
+  'hero' | 
+  'header' |
+  'iconAndContentWithTwoButtons' | 
+  'featureWithImageOnTheLeftAndBulletPoints' | 
+  'alternatedTimeline' | 
+  'alternatedFeatureWithImagesAndText' | 
+  'featuresList' | 
+  'galleryOfFour' | 
+  'galleryOfThree' | 
+  'callToAction' ;
 
-  type tWidgetsInterfaces = iDisplayImage | 
-    iStructreWtihIconAndText |
-    iStrctureWithHeroImageAndText |
-    Array<iStrctureWithHeroImageAndText> |
-    Array<iText> |
-    iFeaturesList |
-    Array<iDisplayImage> |
-    iCallToAction |
-    null;  
+type tWidgetInterfaces = iDisplayImage | 
+  iStructreWtihIconAndText |
+  iStrctureWithHeroImageAndText |
+  Array<iStrctureWithHeroImageAndText> |
+  Array<iText> |
+  iFeaturesList |
+  Array<iDisplayImage> |
+  iCallToAction |
+  null;
 
-interface iHomepageContent {
-  hero: iDisplayImage;
-  iconAndContentWithTwoButtons: iStructreWtihIconAndText;
-  featureWithImageOnTheLeftAndBulletPoints: iStrctureWithHeroImageAndText;
-  alternatedTimeline: Array<iText>;
-  alternatedFeatureWithImagesAndText: Array<iStrctureWithHeroImageAndText>;
-  featuresList: iFeaturesList;
-  galleryOfFour: Array<iDisplayImage>;
-  galleryOfTThere: Array<iDisplayImage>;
-  callToAction: iCallToAction;
+interface iPageContent {
+  hero?: iDisplayImage;
+  iconAndContentWithTwoButtons?: iStructreWtihIconAndText;
+  featureWithImageOnTheLeftAndBulletPoints?: iStrctureWithHeroImageAndText;
+  alternatedTimeline?: Array<iText>;
+  alternatedFeatureWithImagesAndText?: Array<iStrctureWithHeroImageAndText>;
+  featuresList?: iFeaturesList;
+  galleryOfFour?: Array<iDisplayImage>;
+  galleryOfThree?: Array<iDisplayImage>;
+  callToAction?: iCallToAction;
+  header?: iDisplayImage;
 }
 
+
+interface iButton {
+  title: string;
+  link?: string;
+  method?: 'scrollingDown' | 'scrollingUp';
+}
+
+interface iImage {
+  path: string;
+  alt: string;
+}
+
+interface iText {
+  title: string;
+  subtitle?: string;
+  content: string
+}
+
+interface iListItem {
+  icon: string;
+  content: string;
+}
+
+interface iDisplayImage {
+  image: iImage;
+  text: iText;
+  button?: iButton;
+}
+
+interface iStructreWtihIconAndText {
+  image: iImage;
+  text: iText;
+  buttons?: Array<iButton>;
+}
+
+interface iStrctureWithHeroImageAndText {
+  hero: iDisplayImage;
+  text: iText;
+  listItems?: Array<iListItem>;
+}
+
+interface iFeaturesList {
+  text: iText;
+  features: Array<iStructreWtihIconAndText>
+}
+
+interface iCallToAction {
+  text: iText;
+  listItems: Array<iListItem>;
+  button: iButton
+}
+
+
+
+/**
+/ website config
+/**/
 interface iWebsiteSettings {
   URL: string;
   CDN: iCDN;
@@ -88,64 +151,21 @@ interface iA4MBSConfig {
   legalDetails: iLegalDetails; 
 }
 
-interface iButton {
-  title: string;
-  link?: string;
-  method?: 'scrollingDown' | 'scrollingUp';
-}
 
-interface iImage {
-  path: string;
-  alt: string;
-}
 
-interface iText {
-  title: string;
-  subtitle?: string;
-  content: string
-}
-
-interface iListItem {
-  icon: string;
-  content: string;
-}
-
-interface iDisplayImage {
-  image: iImage;
-  text: iText;
-  button?: iButton;
-}
-
-        
-interface iStructreWtihIconAndText {
-  image: iImage;
-  text: iText;
-  buttons?: Array<iButton>;
-}
-
-interface iStrctureWithHeroImageAndText {
-  hero: iDisplayImage;
-  text: iText;
-  listItems?: Array<iListItem>;
-}
-
-interface iFeaturesList {
-  text: iText;
-  features: Array<iStructreWtihIconAndText>
-}
-
-interface iCallToAction {
-  text: iText;
-  listItems: Array<iListItem>;
-  button: iButton
-}
-
+/**
+/ Misc
+/**/
 interface iResponsiveStyle {
   small?: string;
   large?: string;
 }
 
 export {
+
+  // Widgets
+  tWidgets,
+  tWidgetInterfaces,
   iButton,
   iDisplayImage,
   iImage,
@@ -155,8 +175,9 @@ export {
   iText,
   iFeaturesList,
   iCallToAction,
-  tWidgets,
-  iHomepageContent,
+  iPageContent,
+
+  // Website config
   iWebsiteSettings,
   iLogoResources,
   iBranding,
@@ -165,7 +186,8 @@ export {
   iCDNService,
   iCDN,
   iLegalDetails,
-  iA4MBSConfig,
-  iResponsiveStyle,
-  tWidgetsInterfaces
+  iA4MBSConfig,  
+
+  // Misc
+  iResponsiveStyle
 }
