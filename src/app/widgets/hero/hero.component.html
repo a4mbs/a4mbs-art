@@ -6,9 +6,9 @@
     }" 
     [style.backgroundImage]="'linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(' + heroImageURL + ')'">
     <div class="absolute inset-0 grid place-items-center text-white">
-    <div class="text-center">
-      <h1 class="text-7xl lg:text-8xl mb-5 font-light">{{this.data.text.title}}</h1>
-      <h5 class="font-special uppercase text-lg lg:text-xl font-bold mb-20"  *ngIf="fullHeight">{{this.data.text.content}}</h5>
+    <div class=" grid place-items-center text-center">
+      <h1 class="text-6xl lg:text-8xl max-w-sm lg:max-w-full mb-5 font-light">{{this.data.text.title}}</h1>
+      <h5 class="font-special uppercase max-w-xs lg:max-w-full text-sm lg:text-xl font-bold mb-20"  *ngIf="fullHeight">{{this.data.text.content}}</h5>
       <ng-container *ngIf="this.data.button?.title && fullHeight">
         <button         
           [innerHTML]="this.data.button?.title"

@@ -17,8 +17,8 @@ export class HomepageContentService {
       "alternatedTimeline",
       "alternatedFeatureWithImagesAndText",
       "featuresList",
-      "galleryOfFour",
-      "galleryOfThree",
+      "gallery",
+      "gallery1",
       "callToAction"
     ];
     
@@ -82,7 +82,7 @@ export class HomepageContentService {
         text: {
           title: "Crafting a vision",
           content:
-            "With the advent of generative art, the poetry of words came to life and took on color through the magic of some kind of image, which was hard to imagine or conceive before this revolutionary technology. Although I initially strongly rejected this new tool, I ended up loving it and using it almost nonstop. Creating a unique image using AI technology involves:",
+            "With the advent of <strong>generative art</strong>, the poetry of words came to life and took on color through the magic of some kind of image, which was hard to imagine or conceive before this revolutionary technology. Although I initially strongly rejected this new tool, I ended up loving it and using it almost nonstop. Creating a unique image using <strong>AI technology</strong> involves:",
         },
         listItems: [
           {
@@ -140,88 +140,88 @@ export class HomepageContentService {
         {
           hero: {
             image: {
-              path: "",
-              alt: "",
+              path: "home-page/homepage_img02.jpg",
+              alt: "Autumn Bear artwork",
             },
             text: {
-              title: "",
-              content: "",
+              title: "Autumn Bear",
+              content: "illustration, vector art",
             },
             button: {
               title: "View on Behance",
-              link: "",
+              link: "https://www.behance.net/gallery/176684563/Autumn-Bear",
             },
           },
           text: {
             title: "Vector Illustration",
             content:
-              "Another field in which I have specialized is vector illustration. I'm talking about vector illustration, where generative art does not have its place. That is, vector images created from scratch by me. It's true that occasionally I can combine the two, turning a generative algorithm-generated concept into a vector illustration while keeping the machine's creations and making my own adjustments.",
+              "Another field in which I have specialized is <strong>vector illustration</strong>. I'm talking about vector illustration, where <strong>generative art</strong> does not have its place. That is, vector images created from scratch by me. It's true that occasionally I can combine the two, turning a generative algorithm-generated concept into a <strong>vector illustration</strong> while keeping the machine's creations and making my own adjustments.",
           },
         },
         //element 2
         {
           hero: {
             image: {
-              path: "",
-              alt: "",
+              path: "home-page/homepage_img03.jpg",
+              alt: "Lowpoly Room artwork",
             },
             text: {
-              title: "",
-              content: "",
+              title: "Lowpoly Room",
+              content: "3d modeling, 3d art",
             },
             button: {
               title: "View on Behance",
-              link: "",
+              link: "https://www.behance.net/gallery/176792281/Lowpoly-Room",
             },
           },
           text: {
             title: "CGI Illustration",
             content:
-              "When I say CGI, I'm not referring to images generated with AI-based software, but to images generated either with 3D graphics programs such as Cinema4D, Blender, Eon Vue or Daz Studio, or in some cases texture generation programs such as Filter Forge or the Adobe Substance suite. In this process, sometimes it is necessary to model totally or partially elements of the final concept, or to use pre-made models, such as those from Daz3d. Then, the elements need to be carefully placed in the scene, properly lit and rendered. Rendering itself requires skill and expertise, I have specialized more on the Octane engine, but I have also used NVidia's Iray render as well as Corona Render.",
+              "When I say <strong>CGI</strong>, I'm not referring to images generated with AI-based software, but to images generated either with 3D graphics programs such as <strong>Cinema4D</strong>, <strong>Blender</strong>, <strong>Eon Vue</strong> or <strong>Daz Studio</strong>, or in some cases texture generation programs such as <strong>Filter Forge</strong> or the <strong>Adobe Substance</strong> suite. In this process, sometimes it is necessary to model totally or partially elements of the final concept, or to use pre-made models, such as those from <strong>Daz3d</strong>. Then, the elements need to be carefully placed in the scene, properly lit and rendered. Rendering itself requires skill and expertise, I have specialized more on the <strong>Octane engine</strong>, but I have also used <strong>NVidia's Iray render</strong> as well as <strong>Corona Render</strong>.",
           },
         },
         //element 3
         {
           hero: {
             image: {
-              path: "",
-              alt: "",
+              path: "home-page/homepage_img04.jpg",
+              alt: "Blue Song artwork",
             },
             text: {
-              title: "",
-              content: "",
+              title: "Blue Song",
+              content: "image retouch, photography",
             },
             button: {
               title: "View on Behance",
-              link: "",
+              link: "https://www.behance.net/gallery/176777225/Blue-Song",
             },
           },
           text: {
             title: "Digital Photography",
             content:
-              "I can't say that I'm a master of digital photography, but it was the field I started in, and I know how to hold a camera and choose the shutter speed, aperture, and ISO. I've taken a few thousand photos, but at an amateur level. What made me not dedicate myself especially to this field was, on the one hand, the very high cost of professional equipment and, on the other hand, the lack of sufficient satisfaction. In general, photographers specialize in one of the following fields: event photography, stock photography, portrait photography, landscape photography, or wildlife photography. Surely the latter would have been the photographic field that would have attracted me the most, but as a father with five children, I could not afford to travel whenever I would have wanted. This is why CGI art at first and now generative art have attracted me the most: I basically have the opportunity to create my own stories from my office chair, at home next to my family.",
+              "I can't say that I'm a master of <strong>digital photography</strong>, but it was the field I started in, and I know how to hold a camera and choose the <strong>shutter speed</strong>, <strong>aperture</strong>, and <strong>ISO</strong>. I've taken a few thousand photos, but at an amateur level. What made me not dedicate myself especially to this field was, on the one hand, the very high cost of <strong>professional equipment</strong> and, on the other hand, the lack of sufficient satisfaction. In general, photographers specialize in one of the following fields: <strong>event photography</strong>, <strong>stock photography</strong>, <strong>portrait photography</strong>, <strong>landscape photography</strong>, or <strong>wildlife photography</strong>. Surely the latter would have been the photographic field that would have attracted me the most, but as a father with five children, I could not afford to travel whenever I would have wanted. This is why <strong>CGI art</strong> at first and now <strong>generative art</strong> have attracted me the most: I basically have the opportunity to create my own stories from my office chair, at home next to my family.",
           },
         },
         //element 4
         {
           hero: {
             image: {
-              path: "",
-              alt: "",
+              path: "home-page/homepage_img05.jpg",
+              alt: "The Portal in the Forest artwork",
             },
             text: {
-              title: "",
-              content: "",
+              title: "The Portal in the Forest",
+              content: "generative art, illustration",
             },
             button: {
               title: "View on Behance",
-              link: "",
+              link: "https://www.behance.net/gallery/176794643/The-Portal-in-the-Forest",
             },
           },
           text: {
             title: "Matte Painting",
             content:
-              "Matte painting is a field I've only touched on vaguely, but it seems extremely promising to me. However, considering the experience I have with image processing and the recent use of AI-based generators, I believe I will begin to delve deeper into this method that actually combines all the others. It combines the art of photography with the art of digital retouching, with the addition of CGI or AI-generated elements, and in some cases even with vector art. All to create a perfect masterpiece.",
+              "<strong>Matte painting</strong> is a field I've only touched on vaguely, but it seems extremely promising to me. However, considering the experience I have with <strong>image processing</strong> and the recent use of <strong>AI-based generators</strong>, I believe I will begin to delve deeper into this method that actually combines all the others. It combines the art of <strong>photography</strong> with the art of <strong>digital retouching</strong>, with the addition of <strong>CGI</strong> or <strong>AI-generated elements</strong>, and in some cases even with <strong>vector art</strong>. All to create a perfect masterpiece.",
           },
         },
       ],
@@ -236,8 +236,8 @@ export class HomepageContentService {
           //element 1
           {
             image: {
-              path: "",
-              alt: "",
+              path: "home-page/homepage_icon1",
+              alt: "childhood icon",
             },
             text: {
               title: "Themes related to childhood",
@@ -248,8 +248,8 @@ export class HomepageContentService {
           //element2
           {
             image: {
-              path: "",
-              alt: "",
+              path: "home-page/homepage_icon2",
+              alt: "dark themes icon",
             },
             text: {
               title: "Fantasy and dark themes",
@@ -260,137 +260,137 @@ export class HomepageContentService {
           //element 3
           {
             image: {
-              path: "",
-              alt: "",
+              path: "home-page/homepage_icon3",
+              alt: "surrealism icon",
             },
             text: {
               title: "Surrealism",
               content:
-                "David Lynch and later Salvador Dali represented my first magical encounters with art. I had seen other artists in my childhood, but these two left the most profound imprint on my beginnings.",
+                "<strong>David Lynch</strong> and later <strong>Salvador Dali</strong> represented my first magical encounters with art. I had seen other artists in my childhood, but these two left the most profound imprint on my beginnings.",
             },
           },
           //element 4
           {
             image: {
-              path: "",
-              alt: "",
+              path: "home-page/homepage_icon4",
+              alt: "expressionism icon",
             },
             text: {
               title: "Expressionism and the Dada Movement",
               content:
-                "Although initially works like Picasso's paintings, cubism, expressionism, dadaism, and even modern abstract art seemed strange, a scribble, in recent years I have become increasingly fascinated by these movements.",
+                "Although initially works like <strong>Picasso</strong>'s paintings, <strong>cubism</strong>, <strong>expressionism</strong>, <strong>dadaism</strong>, and even <strong>modern abstract art</strong> seemed strange, a scribble, in recent years I have become increasingly fascinated by these movements.",
             },
           },
         ],
       },
       //section 7
-      galleryOfFour: [
+      gallery: [
         //image 1
         {
           image: {
-            path: "",
-            alt: "",
+            path: "home-page/homepage_img06.jpg",
+            alt: "Cozy Setup artwork",
           },
           text: {
-            title: "",
-            content: "",
+            title: "Cozy Setup",
+            content: "3d art, illustration",
           },
           button: {
             title: "View on Behance",
-            link: "",
+            link: "https://www.behance.net/gallery/176748139/Cozy-Setup",
           },
         },
         //image 2
         {
           image: {
-            path: "",
-            alt: "",
+            path: "home-page/homepage_img07.jpg",
+            alt: "Green Orang artwork",
           },
           text: {
-            title: "",
-            content: "",
+            title: "Green Orange",
+            content: "fractal art, illustration",
           },
           button: {
             title: "View on Behance",
-            link: "",
+            link: "https://www.behance.net/gallery/176768455/Green-Orange",
           },
         },
         //image 3
         {
           image: {
-            path: "",
-            alt: "",
+            path: "home-page/homepage_img08.jpg",
+            alt: "Cozy Hall artwork",
           },
           text: {
-            title: "",
-            content: "",
+            title: "Cozy Hall",
+            content: "3d art, illustration",
           },
           button: {
             title: "View on Behance",
-            link: "",
+            link: "https://www.behance.net/gallery/176749987/Cozy-Hall",
           },
         },
         //image 4
         {
           image: {
-            path: "",
-            alt: "",
+            path: "home-page/homepage_img09.jpg",
+            alt: "Steampunk Robot artwork",
           },
           text: {
-            title: "",
-            content: "",
+            title: "Steampunk Robot",
+            content: "3d art, illustration",
           },
           button: {
             title: "View on Behance",
-            link: "",
+            link: "https://www.behance.net/gallery/176741819/Steampunk-Robot",
           },
         },
       ],
       //section 8
-      galleryOfThree: [
+      gallery1: [
         //image 1
         {
           image: {
-            path: "",
-            alt: "",
+            path: "home-page/homepage_img10.jpg",
+            alt: "Rosenborg Castle artwork",
           },
           text: {
-            title: "",
-            content: "",
+            title: "Rosenborg Castle",
+            content: "image retouch, photography",
           },
           button: {
             title: "View on Behance",
-            link: "",
+            link: "https://www.behance.net/gallery/176790955/Rosenborg-Castle",
           },
         },
         //image 2
         {
           image: {
-            path: "",
-            alt: "",
+            path: "home-page/homepage_img11.jpg",
+            alt: "Silent Cry artwork",
           },
           text: {
-            title: "",
-            content: "",
+            title: "Silent Cry",
+            content: "image retouch, photography",
           },
           button: {
             title: "View on Behance",
-            link: "",
+            link: "https://www.behance.net/gallery/176480787/Silent-Cry",
           },
         },
         //image 3
         {
           image: {
-            path: "",
-            alt: "",
+            path: "home-page/homepage_img12.jpg",
+            alt: "Fresh Flowers artwork",
           },
           text: {
-            title: "",
-            content: "",
+            title: "Fresh Flowers",
+            content: "image retouch, photography",
           },
           button: {
             title: "View on Behance",
-            link: "",
+            link: "https://www.behance.net/gallery/176774653/Fresh-Flowers",
           },
         },
       ],

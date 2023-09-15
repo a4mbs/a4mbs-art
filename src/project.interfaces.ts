@@ -9,8 +9,8 @@ type tWidgets =
   'alternatedTimeline' | 
   'alternatedFeatureWithImagesAndText' | 
   'featuresList' | 
-  'galleryOfFour' | 
-  'galleryOfThree' | 
+  'gallery' | 
+  'gallery1' |
   'callToAction' ;
 
 type tWidgetInterfaces = iDisplayImage | 
@@ -30,8 +30,8 @@ interface iPageContent {
   alternatedTimeline?: Array<iText>;
   alternatedFeatureWithImagesAndText?: Array<iStrctureWithHeroImageAndText>;
   featuresList?: iFeaturesList;
-  galleryOfFour?: Array<iDisplayImage>;
-  galleryOfThree?: Array<iDisplayImage>;
+  gallery?: Array<iDisplayImage>;
+  gallery1?: Array<iDisplayImage>;
   callToAction?: iCallToAction;
   header?: iDisplayImage;
 }

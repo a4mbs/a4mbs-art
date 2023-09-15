@@ -1,5 +1,5 @@
-<div class="max-w-7xl mx-auto min-w-[400px] px-10 xl:px-0 flex flex-col-reverse md:flex-row items-center">
-  <div class="md:w-1/2 flex justify-center items-center">
+<div class="max-w-4xl xl:max-w-[1600px] mx-auto min-w-[400px] px-10 flex flex-col-reverse xl:flex-row items-center">
+  <div class="xl:w-1/2 flex justify-center items-center">
       <w-display-image
         [imagePath]="this.data.hero.image.path"   
         [hasOverlay]="true"
@@ -8,27 +8,31 @@
         [overlayHasLinkButton]="true"
         [overlayLinkButtonLabel]="this.data.hero.button?.title"
         [overlayLinkButtonURL]="this.data.hero.button?.link"   
-        class="md:shadow-[-1.5rem_1.5rem] 
-        md:shadow-light-100">
+        class="xl:shadow-[-1.5rem_1.5rem] 
+        xl:shadow-light-100">
       </w-display-image>      
    </div>
-  <div class="md:w-1/2 ms-10 mb-10 md:mb-0">
+  <div class="xl:w-1/2 ms-10 mb-10 xl:mb-0">
 
-    <div class="mb-5">
+    <div class="mb-4">
       <h2 class="mb-3">{{this.data.text.title}}</h2>
-      <p>
-        {{this.data.text.content}}
+      <p class="text-lg leading-7 xl:text-xl xl:leading-8" [innerHTML]="data.text.content">
       </p>
     </div>
 
-    <ul class="ps-5">
+    <div class="grid grid-cols-1 gap-4 xl:gap-6">
       <ng-container *ngFor="let item of this.data!.listItems">
-        <li class="leading-[2.8]">
-          <i [ngClass]="['inline-block me-3 text-success scale-[1.8] pt-2', item.icon]"></i>
-          {{item.content}}
-        </li>
-      </ng-container>      
-    </ul>
+        <div class="grid grid-cols-12 items-center">
+          <div class="col-span-1 justify-self-end scale-[1.8] pe-3 pt-1">
+            <i [ngClass]="['text-success scale-[1.8] pt-2', item.icon]"></i>
+          </div>
+          <div class="col-span-11 text-base xl:text-lg">
+            {{item.content}}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    
 
   </div>  
 </div>

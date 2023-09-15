@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { iStrctureWithHeroImageAndText } from "src/project.interfaces";
 
 @Component({
   selector: 'w-alternated-feature-with-images-and-text',
@@ -6,4 +7,5 @@ import { Component } from "@angular/core";
   styles: []
 })
 export class wAlternatedFeatureWithImagesAndTextComponent {
+  @Input() data!: Array<iStrctureWithHeroImageAndText>;
 }

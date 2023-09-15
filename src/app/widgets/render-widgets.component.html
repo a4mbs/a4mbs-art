@@ -59,30 +59,48 @@
 
 
   <ng-container *ngSwitchCase="'alternatedFeatureWithImagesAndText'">
-    {{ this.alternatedFeatureWithImagesAndTextData | json }}
+    <section class="mb-20 lg:mb-32">
+      <w-alternated-feature-with-images-and-text
+        [data]="this.alternatedFeatureWithImagesAndTextData!">
+      </w-alternated-feature-with-images-and-text>
+    </section>
   </ng-container>
 
 
 
   <ng-container *ngSwitchCase="'featuresList'">
-    {{ this.featuresListData | json }}
+    <section class="mb-20 lg:mb-32">
+      <w-features-list
+        [data]="this.featuresListData!">
+      </w-features-list>
+    </section>
   </ng-container>
 
 
 
-  <ng-container *ngSwitchCase="'galleryOfFour'">
-    {{ this.galleryOfFourData | json }}
+  <ng-container *ngSwitchCase="'gallery'">
+    <section class="mb-0 lg:mb-0">
+      <w-gallery
+        [data]="this.gallery!">
+      </w-gallery>
+    </section>
   </ng-container>
 
 
-
-  <ng-container *ngSwitchCase="'galleryOfThree'">
-    {{ this.galleryOfThreeData | json }}
+  <ng-container *ngSwitchCase="'gallery1'">
+    <section class="mb-20 lg:mb-32">
+      <w-gallery
+        [data]="this.gallery1!">
+      </w-gallery>
+    </section>
   </ng-container>
-
 
   <ng-container *ngSwitchCase="'callToAction'">
-    {{ this.callToActionData | json }}
+    <section class="mb-20 lg:mb-32">
+      <w-call-to-action
+        [data]="this.callToActionData!"
+      ></w-call-to-action>
+    </section>    
   </ng-container>
 </ng-container>
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { iFeaturesList } from 'src/project.interfaces';
 
 @Component({
   selector: 'w-features-list',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styles: []
 })  
 export class wFeaturesListComponent {
-
+  @Input() data!: iFeaturesList;
 }

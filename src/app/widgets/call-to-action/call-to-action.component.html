@@ -1,0 +1,32 @@
+<div class="xl:max-w-[1920px] mx-auto min-w-[400px] px-10 grid place-items-center">
+  <h6 class="text-center text-xl leading-8 xl:text-2xl xl:leading-9 mb-10" [innerHTML]="data.text.content"></h6>
+  <h2 class="text-center text-6xl xl:text-8xl mb-8 xl:mb-12">{{data.text.title}}</h2>
+  <div class="max-w-xl lg:max-w-6xl flex flex-wrap justify-center items-center mb-5 lg:mb-14">
+    <ng-container *ngFor="let item of this.data!.listItems">
+      <div class="flex items-center mx-5 my-1">
+        <i [ngClass]="['text-success scale-[1.8] pt-2', item.icon]"></i>
+        <div class="text-base xl:text-lg ml-3">
+          {{item.content}}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <button 
+      (click)="goToLink()" 
+      class="
+        btn 
+        lg:text-2xl
+        text-xl
+        px-10
+        py-5
+        text-white
+        border 
+        bg-primary 
+        hover:bg-primary-400
+        hover:text-white 
+        lg:mr-2 
+        w-full 
+        lg:w-auto">
+        {{ data.button.title }}
+      </button>
+</div>

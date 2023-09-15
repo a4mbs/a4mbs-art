@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'; 
+import { Component, Input } from '@angular/core'; 
+import { iCallToAction } from 'src/project.interfaces';
 
 @Component({
   selector: 'w-call-to-action',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class wCallToActionComponent {
-
+  @Input() data!: iCallToAction;
+  goToLink(){
+    window.open(this.data.button.link, "_blank");
+  }
 }

@@ -26,8 +26,8 @@ export class RenderWidgetsComponent implements OnInit {
   alternatedTimelineData?: Array<iText>;
   alternatedFeatureWithImagesAndTextData?: Array<iStrctureWithHeroImageAndText>;
   featuresListData?: iFeaturesList;
-  galleryOfFourData?: Array<iDisplayImage>;
-  galleryOfThreeData?: Array<iDisplayImage>;
+  gallery?: Array<iDisplayImage>;
+  gallery1?: Array<iDisplayImage>;
   callToActionData?: iCallToAction;
 
   ngOnInit(){
@@ -53,11 +53,11 @@ export class RenderWidgetsComponent implements OnInit {
       case 'featuresList':
         this.featuresListData = this.data as iFeaturesList;
         break;
-      case 'galleryOfFour':
-        this.galleryOfFourData = this.data as Array<iDisplayImage>;
+      case 'gallery':
+        this.gallery = this.data as Array<iDisplayImage>;
         break;
-      case 'galleryOfThree':   
-        this.galleryOfThreeData = this.data as Array<iDisplayImage>;
+      case 'gallery1':   
+        this.gallery1 = this.data as Array<iDisplayImage>;
         break;
       case 'callToAction':
         this.callToActionData = this.data as iCallToAction;

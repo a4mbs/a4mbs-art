@@ -10,10 +10,9 @@ import { wIconAndContentWithTwoButtonsComponent } from './icon-and-content-with-
 import { wFeatureWithImageOnTheLeftAndBulletPointsComponent } from './feature-with-image-on-the-left-and-bullet-points/feature-with-image-on-the-left-and-bullet-points.component';
 import { wAlternatedFeatureWithImagesAndTextComponent } from './alternated-feature-with-images-and-text/alternated-feature-with-images-and-text.component';
 import { wFeaturesListComponent } from './features-list/features-list.component';
-import { wGalleryOfFourComponent } from './gallery-of-four/gallery-of-four.component';
-import { wGalleryOfThreeComponent } from './gallery-of-three/gallery-of-three.component';
 import { wCallToActionComponent } from './call-to-action/call-to-action.component';
 import { RenderWidgetsComponent } from './render-widgets.component';
+import { wGalleryComponent } from './gallery/gallery.component';
 
 const WIDGETS = [
   wDisplayImageComponent,
@@ -24,9 +23,8 @@ const WIDGETS = [
   wFeatureWithImageOnTheLeftAndBulletPointsComponent,
   wAlternatedFeatureWithImagesAndTextComponent,
   wFeaturesListComponent,
-  wGalleryOfFourComponent,
-  wGalleryOfThreeComponent,
   wCallToActionComponent,
+  wGalleryComponent,
   RenderWidgetsComponent
 ];
 
