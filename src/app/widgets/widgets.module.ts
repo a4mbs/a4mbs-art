@@ -13,6 +13,7 @@ import { wFeaturesListComponent } from './features-list/features-list.component'
 import { wCallToActionComponent } from './call-to-action/call-to-action.component';
 import { RenderWidgetsComponent } from './render-widgets.component';
 import { wGalleryComponent } from './gallery/gallery.component';
+import { wNavbarComponent } from './navbar/navbar-component';
 
 const WIDGETS = [
   wDisplayImageComponent,
@@ -25,6 +26,7 @@ const WIDGETS = [
   wFeaturesListComponent,
   wCallToActionComponent,
   wGalleryComponent,
+  wNavbarComponent,
   RenderWidgetsComponent
 ];
 

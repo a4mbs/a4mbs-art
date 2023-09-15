@@ -403,19 +403,19 @@ export class HomepageContentService {
         listItems: [
           {
             icon: "fi fi-rs-check-circle",
-            content: "30-Day Money-Back Guarantee",
+            content: "Meticulous attention to detail",
           },
           {
             icon: "fi fi-rs-check-circle",
-            content: "No credit card required",
+            content: "Fast and timely response",
           },
           {
             icon: "fi fi-rs-check-circle",
-            content: "100% dedication",
+            content: "Commitment and dedication",
           },
           {
             icon: "fi fi-rs-check-circle",
-            content: "First class support",
+            content: "Using cutting-edge technologies",
           },
         ],
         button: {

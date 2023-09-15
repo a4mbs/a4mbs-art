@@ -4,7 +4,7 @@
   <div class="max-w-xl lg:max-w-6xl flex flex-wrap justify-center items-center mb-5 lg:mb-14">
     <ng-container *ngFor="let item of this.data!.listItems">
       <div class="flex items-center mx-5 my-1">
-        <i [ngClass]="['text-success scale-[1.8] pt-2', item.icon]"></i>
+        <i [ngClass]="['text-success scale-[1.8] pt-1', item.icon]"></i>
         <div class="text-base xl:text-lg ml-3">
           {{item.content}}
         </div>
@@ -26,6 +26,7 @@
         hover:text-white 
         lg:mr-2 
         w-full 
+        max-w-xl
         lg:w-auto">
         {{ data.button.title }}
       </button>

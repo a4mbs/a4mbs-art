@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { pHomeComponent } from './pages/home/home.component';
 import { pPrivacyPolicyComponent } from './pages/misc/privacy-policy/privacy-policy.component';
 import { pTermsOfUseComponent } from './pages/misc/terms-of-use/terms-of-use.component';
+import { pBlogComponent } from './pages/blog/blog.component';
 
 const routes: Routes = [
   {
@@ -23,7 +24,13 @@ const routes: Routes = [
     path:'terms-of-use',
     component: pTermsOfUseComponent,
     data: { title: 'Terms of Use' }
+  },
+  {
+    path:'blog',
+    component: pBlogComponent,
+    data: { title: 'Blog Posts' }
   }
+
 ];
 
 @NgModule({

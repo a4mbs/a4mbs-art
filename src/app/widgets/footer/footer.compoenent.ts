@@ -9,9 +9,10 @@ import { WebsiteConfigService, iSellingMedia, iSocialMedia } from 'src/app/servi
 })
 export class wFooterComponent {
 
+  isFormDisabled: boolean = true;
+
   constructor(
     private websiteConfigService: WebsiteConfigService,
-    private mediaResolverService: MediaResolverService
     ) { 
   }
 

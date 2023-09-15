@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HomepageContentService } from './home.content.service';
-import {  tWidgets, iPageContent } from 'src/project.interfaces';
+import { tWidgets, iPageContent } from 'src/project.interfaces';
 
 @Component({
   selector: 'pag-home',

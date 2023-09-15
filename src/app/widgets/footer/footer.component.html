@@ -1,6 +1,7 @@
+
 <div class="bg-dark text-white">
-  <div class="max-w-7xl mx-auto min-w-[400px] py-10 px-10 lg:px-0">
-    <div class="2xl:flex 2xl:justify-between">
+  <div class="max-w-7xl mx-auto min-w-[400px] py-10 px-10 2xl:px-0">
+    <div class="2xl:flex 2xl:justify-between 2xl:items-center"> 
       <!-- site title and logo  on larger screens-->
       <div class="mb-16 2xl:mb-0">
         <div class="hidden 2xl:block">
@@ -33,6 +34,64 @@
           </div>
         </div>
       </div>
+
+
+      <form  [attr.disabled]="isFormDisabled ? true : null" class="max-w-xl min-w-[400px] mx-auto mb-20 2xl:mb-0">  
+        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <i class="text-dark-800 text-xl fi fi-rs-search pt-1"></i>               
+            </div>
+            <input 
+              [attr.disabled]="isFormDisabled ? true : null" type="search"
+              id="default-search" 
+              class="
+                  disabled:bg-slate-600
+                  disabled:border-slate-700
+                  disabled:cursor-not-allowed
+                  text-dark 
+                  block 
+                  w-full 
+                  p-4 
+                  pl-10 
+                  text-sm  
+                  border 
+                  border-slate-300 
+                  rounded-lg 
+                  bg-slate-50 " 
+                [placeholder]="isFormDisabled ? 'Feature currently unavailable...': 'Searching for something amazing...'" required>
+              <button  
+                [attr.disabled]="isFormDisabled ? true : null" 
+                type="submit" 
+                class="
+                    disabled:cursor-not-allowed
+                    disabled:bg-warning-800
+                    disabled:hover:bg-warning-800
+                    disabled:text-slate-400
+                    text-white 
+                    absolute 
+                    right-2.5 
+                    bottom-2.5 
+                    bg-warning 
+                    hover:bg-warning-600 
+                    font-medium 
+                    rounded-lg 
+                    text-sm 
+                    px-4 
+                    py-2 ">
+                  Search
+              </button>
+        </div>
+      </form>
+      
+
+
+
+
+
+
+
+
       <!-- stock images, print on demand, legal -->
       <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
         <div>
@@ -73,15 +132,15 @@
     <!-- copyright -->
     <div class="sm:flex sm:items-center sm:justify-between">
       <span class="text-sm text-inverse sm:text-center">© {{getCurrentYear()}}
-        <a [href]="getWebsiteURL()">{{getWebsiteTitle()}}™</a> - All Rights Reserved. </span>
+        <a [href]="getWebsiteURL()">{{getWebsiteTitle()}}™</a> - All Rights Reserved - UIcons by <a href="https://www.flaticon.com/uicons">Flaticon</a>.</span>
       <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
         <ng-container *ngFor="let sm of getSocialMediaResources()">
           <a [href]="sm.link" target="_blank" class="hover:scale-[1.8] hover:no-underline" rel="noopener">
             <i class="fi" [ngClass]="'fi-brands-'+sm.icon"></i>
             <span class="sr-only">{{sm.title}}</span>
           </a>
-        </ng-container>
-      </div>
+        </ng-container>        
+      </div>      
     </div>
   </div>
 </div>
