@@ -4,6 +4,7 @@ import { pHomeComponent } from './pages/home/home.component';
 import { pPrivacyPolicyComponent } from './pages/misc/privacy-policy/privacy-policy.component';
 import { pTermsOfUseComponent } from './pages/misc/terms-of-use/terms-of-use.component';
 import { pBlogComponent } from './pages/blog/blog.component';
+import { pCopyrightForResources } from './pages/misc/copyright-for-resources/copyright-for-resources.componen';
 
 const routes: Routes = [
   {
@@ -24,6 +25,11 @@ const routes: Routes = [
     path:'terms-of-use',
     component: pTermsOfUseComponent,
     data: { title: 'Terms of Use' }
+  },
+  {
+    path:'copyright',
+    component: pCopyrightForResources,
+    data: { title: 'Copyright for the Resources' }  
   },
   {
     path:'blog',

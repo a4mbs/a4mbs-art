@@ -19,9 +19,9 @@ export const A4MBS_CONFIG: iA4MBSConfig = {
 
   // Legal Details
   legalDetails: {
-    privacyPolicyLastUpdated: "2023-09-04",
-    termsOfUseLastUpdated: "2023-09-01",
-    contactEmail: "contact@a4mbs.art",
+    privacyPolicyLastUpdated: "2023-12-15",
+    termsOfUseLastUpdated: "2023-12-15",
+    contactEmail: "a4mbs@proton.me",
   },
 
   // Branding

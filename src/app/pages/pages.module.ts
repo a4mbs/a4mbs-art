@@ -5,11 +5,13 @@ import { CommonModule } from "@angular/common";
 import { WidgetsModule } from "../widgets/widgets.module";
 import { HomepageModule } from "./home/home.module";
 import { BlogModule } from "./blog/blog.module";
+import { pCopyrightForResources } from "./misc/copyright-for-resources/copyright-for-resources.componen";
 
 @NgModule({
   declarations: [
     pPrivacyPolicyComponent,
     pTermsOfUseComponent,
+    pCopyrightForResources
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { BlogModule } from "./blog/blog.module";
   exports : [
     pPrivacyPolicyComponent,
     pTermsOfUseComponent,
+    pCopyrightForResources,
     HomepageModule,
     BlogModule
   ]
