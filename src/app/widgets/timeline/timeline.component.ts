@@ -1,7 +1,9 @@
 //define a component for the timeline widget
-import { Component, ContentChildren, HostListener, Input, QueryList, TemplateRef } from '@angular/core';
+import { Component, ContentChildren, HostListener, Input, OnInit, QueryList, TemplateRef, inject } from '@angular/core';
 import { iResponsiveStyle } from '../../../project.interfaces';
 import { CommonModule } from '@angular/common';
+import { Renderer2 } from '@angular/core';
+
 
 @Component({
   selector: 'a4mbs-timeline',
@@ -10,16 +12,34 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule]
 })
-export class TimelineComponent  {
+export class TimelineComponent implements OnInit {
   @ContentChildren('timelineElement', { read: TemplateRef }) timelineItems?: QueryList<TemplateRef<any>>;
   @Input() timelineColor!: string;
   @Input() eventsColor!: string;
   @Input() elementColor!: string;
   @Input() responsiveStyle?: iResponsiveStyle;
+  setResponsiveStyle: string = '';
+  private renderer2: Renderer2 = inject(Renderer2);
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     //This will trigger the change detection
+    const window = event.target as Window;    
+    this.setResponsiveForCurrentWindow(window.innerWidth); 
+  }
+
+  ngOnInit(): void {
+    this.renderer2.listen('window', 'load', event => {
+      this.setResponsiveForCurrentWindow(event.currentTarget.innerWidth);
+    })
+  }
+
+  private setResponsiveForCurrentWindow(width: number): void {
+    if (width < 768) {
+      this.setResponsiveStyle = this.getTimelineStyle(this.responsiveStyle?.small || 'right') ;
+    } else {
+      this.setResponsiveStyle = this.getTimelineStyle(this.responsiveStyle?.large || 'right-first') ;
+    }
   }
 
   private getTimelineStyle(style?: string): string {   
@@ -42,13 +62,6 @@ export class TimelineComponent  {
         style = 'timeline-left-first';
     }
     return style;
-  }
-
-  setResponsiveStyle(): string {      
-    // if (window.innerWidth < 768) {
-    //   return this.getTimelineStyle(this.responsiveStyle?.small || 'right') ;  
-    // } return this.getTimelineStyle(this.responsiveStyle?.large || 'right-first') ;
-    return this.getTimelineStyle(this.responsiveStyle?.small || 'right');
   }
 
 
