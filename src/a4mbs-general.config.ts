@@ -3,7 +3,7 @@ import { iA4MBSConfig } from "./project.interfaces";
 export const A4MBS_CONFIG: iA4MBSConfig = {
   // Website General Settings
   websiteSettings: {
-    URL: "http://localhost:4200",
+    URL: "https://a4mbs-digital.art/",
     CDN: {
       currentServiceIndex: 0, // Index in CDNServices array
       services: [
