@@ -1,0 +1,38 @@
+<div class="max-w-4xl xl:max-w-[1600px] mx-auto min-w-[400px] px-10 flex flex-col-reverse xl:flex-row items-center">
+  <div class="xl:w-1/2 flex justify-center items-center">
+      <a4mbs-display-image
+        [imagePath]="this.data.hero.image.path"   
+        [hasOverlay]="true"
+        [overlayTitle]="this.data.hero.text.title"
+        [overlaySubtitle]="this.data.hero.text.content"
+        [overlayHasLinkButton]="true"
+        [overlayLinkButtonLabel]="this.data.hero.button?.title"
+        [overlayLinkButtonURL]="this.data.hero.button?.link"   
+        class="xl:shadow-[-1.5rem_1.5rem] 
+        xl:shadow-light-100">
+      </a4mbs-display-image>      
+   </div>
+  <div class="xl:w-1/2 ms-10 mb-10 xl:mb-0">
+
+    <div class="mb-4">
+      <h2 class="mb-3">{{this.data.text.title}}</h2>
+      <p class="text-lg leading-7 xl:text-xl xl:leading-8" [innerHTML]="data.text.content">
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 xl:gap-6">
+      <ng-container *ngFor="let item of this.data!.listItems">
+        <div class="grid grid-cols-12 items-center">
+          <div class="col-span-1 justify-self-end scale-[1.8] pe-3 pt-1">
+            <i [ngClass]="['text-success scale-[1.8] pt-2', item.icon]"></i>
+          </div>
+          <div class="col-span-11 text-base xl:text-lg">
+            {{item.content}}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    
+
+  </div>  
+</div>

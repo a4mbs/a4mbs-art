@@ -1,0 +1,22 @@
+<div class="max-w-3xl xl:max-w-5xl mx-auto min-w-[400px] px-10 lg:px-0 grid place-items-center">
+  
+  <a4mbs-display-image
+    width="150"
+    height="150"
+    class="mb-6"
+    [imagePath]="data.image.path"
+    [imageAlt]="data.image.alt"
+  ></a4mbs-display-image>
+
+  <div class="mb-5">
+    <h2 class="text-center mb-3">{{data.text.title}}</h2>
+    <p class="text-center text-lg leading-7 xl:text-xl xl:leading-8" [innerHTML]="data.text.content">
+    </p>
+  </div>
+
+  <div class="flex w-full lg:w-auto flex-col lg:flex-row lg:justify-start px-10">
+    <button (click)="goToButtonLink(0)" class="btn border bg-primary hover:bg-primary-500  hover:text-white lg:mr-2 w-full lg:w-auto">{{ getButtonTitle(0) }}</button>
+    <button (click)="goToButtonLink(1)" class="btn border text-warning hover:text-dark border-warning hover:bg-warning lg:ml-2 w-full lg:w-auto">{{ getButtonTitle(1) }}</button>
+  </div>
+
+</div>

@@ -1,1 +1,6 @@
-<a4mbs-hero></a4mbs-hero>
+<ng-container *ngFor="let item of getSections()">
+    <a4mbs-render-widgets 
+      [widgetType]="item"
+      [data]="getContent()[item] || null">
+    </a4mbs-render-widgets>
+  </ng-container>

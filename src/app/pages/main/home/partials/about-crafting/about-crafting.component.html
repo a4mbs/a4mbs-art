@@ -1,0 +1,41 @@
+<div class="max-w-7xl mx-auto min-w-[400px] py-10 px-10 lg:px-0 flex flex-col-reverse md:flex-row items-center">
+  <div class="md:w-1/2 flex justify-center items-center">
+      <a4mbs-display-image
+        [imagePath]="image.image.path"   
+        [hasOverlay]="true"
+        [overlayTitle]="image.text.title"
+        [overlaySubtitle]="image.text.content"
+        [overlayHasLinkButton]="true"
+        [overlayLinkButtonLabel]="image.button?.title"
+        [overlayLinkButtonURL]="image.button?.link"   
+        class="md:shadow-[-1.5rem_1.5rem] 
+        md:shadow-light-100">
+      </a4mbs-display-image>      
+   </div>
+  <div class="md:w-1/2 ms-10">
+
+    <div class="mb-5">
+      <h2 class="mb-3">Crafting a vision</h2>
+      <p>
+        With the advent of generative art, the poetry of words came to life and took on color through the magic of some kind of image, which was hard to imagine or conceive before this revolutionary technology. Although I initially strongly rejected this new tool, I ended up loving it and using it almost nonstop. Creating a unique image using AI technology involves:
+      </p>
+    </div>
+
+    <ul class="ps-5">
+      <li class="leading-[2.8]">
+        <i class="inline-block fi fi-rs-check-circle me-3 text-success scale-[1.8] pt-2"></i>finding a theme, a subject, or simply falling into daydreaming
+      </li>
+      <li class="leading-[2.8]">
+        <i class="inline-block fi fi-rs-check-circle me-3 text-success scale-[1.8] pt-2"></i>developing the ability to express that vision in a prompt
+      </li>
+      <li class="leading-[2.8]">
+        <i class="inline-block fi fi-rs-check-circle me-3 text-success scale-[1.8] pt-2"></i>studying artistic movements and artworks, or even other generative artworks
+      </li>
+      <li class="leading-[2.8]">
+        <i class="inline-block fi fi-rs-check-circle me-3 text-success scale-[1.8] pt-2"></i>and last but not least, processing and finishing the generated image, giving it a personal touch and enriching what the machine has created
+      </li>
+    </ul>
+
+  </div>
+  
+</div>

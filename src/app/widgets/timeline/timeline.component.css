@@ -1,0 +1,220 @@
+/* I am using Tailwind in this project, and Tailwind recommended not using SASS, but this stylesheet is complex, and I don't want to rewrite it in Tailwind. So I am using SASS for this stylesheet only.
+Compile it using https://www.sassmeister.com/ and copy/paste the result in styles.css
+*/
+.timeline-left-first {
+  position: relative;
+}
+.timeline-left-first:before {
+  content: "";
+  width: 8px;
+  height: 100%;
+  top: 0%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline-left-first .timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline-left-first .timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-left-first .timeline-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.timeline-left-first .timeline-item .timeline-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25px;
+}
+.timeline-left-first .timeline-item .timeline-content {
+  position: relative;
+  width: 45%;
+  border-radius: 20px;
+}
+.timeline-left-first .timeline-item .timeline-content::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  top: calc(45px - (25px / 2));
+  right: -18px;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+.timeline-left-first .timeline-item:nth-child(even) .timeline-content {
+  float: right;
+}
+.timeline-left-first .timeline-item:nth-child(even) .timeline-content::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  top: calc(45px - (25px / 2));
+  left: -18px;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+
+.timeline-right-first {
+  position: relative;
+}
+.timeline-right-first:before {
+  content: "";
+  width: 8px;
+  height: 100%;
+  top: 0%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline-right-first .timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline-right-first .timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-right-first .timeline-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.timeline-right-first .timeline-item .timeline-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25px;
+}
+.timeline-right-first .timeline-item .timeline-content {
+  position: relative;
+  width: 45%;
+  border-radius: 20px;
+}
+.timeline-right-first .timeline-item .timeline-content::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  top: calc(45px - (25px / 2));
+  right: -18px;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+.timeline-right-first .timeline-item:nth-child(odd) .timeline-content {
+  float: right;
+}
+.timeline-right-first .timeline-item:nth-child(odd) .timeline-content::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  top: calc(45px - (25px / 2));
+  left: -18px;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+
+.timeline-left {
+  position: relative;
+}
+.timeline-left:before {
+  content: "";
+  width: 8px;
+  height: 100%;
+  top: 0%;
+  position: absolute;
+  right: 0%;
+  transform: translateX(50%);
+}
+.timeline-left .timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline-left .timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-left .timeline-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.timeline-left .timeline-item .timeline-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0%;
+  transform: translateX(50%);
+  top: 25px;
+}
+.timeline-left .timeline-item .timeline-content {
+  position: relative;
+  width: 95 90%;
+  border-radius: 20px;
+  float: left;
+}
+.timeline-left .timeline-item .timeline-content::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 20px;
+  top: calc(45px - (20px / 2));
+  right: -14px;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+.timeline-right {
+  position: relative;
+}
+.timeline-right:before {
+  content: "";
+  width: 8px;
+  height: 100%;
+  top: 0%;
+  position: absolute;
+  left: 0%;
+  transform: translateX(-50%);
+}
+.timeline-right .timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline-right .timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-right .timeline-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.timeline-right .timeline-item .timeline-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0%;
+  transform: translateX(-50%);
+  top: 25px;
+}
+.timeline-right .timeline-item .timeline-content {
+  position: relative;
+  width: 90%;
+  border-radius: 20px;
+  float: right;
+}
+.timeline-right .timeline-item .timeline-content::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 20px;
+  top: calc(45px - (20px / 2));
+  left: -14px;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}

@@ -1,0 +1,42 @@
+<div class="hidden 2xl:block">
+  <div class="flex flex-row flex-nowrap items-center">
+    <ng-container *ngFor="let item of data; let i = index;">
+      <div class="flex-1 min-w-[calc(100%/data.length)]">
+        <a4mbs-display-image
+          [imagePath]="item.image.path"
+          [hasOverlay]="true"
+          [overlayTitle]="item.text.title"
+          [overlaySubtitle]="item.text.content"
+          [overlayHasLinkButton]="true"
+          [overlayLinkButtonLabel]="item.button?.title"
+          [overlayLinkButtonURL]="item.button?.link">
+        </a4mbs-display-image>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+<!-- For screens smaller than 'md', it will stack items vertically. For 'md' and up, it will go with two columns -->
+<div class="block 2xl:hidden">
+  <div class="flex flex-col md:flex-row md:flex-wrap items-center">
+    <ng-container *ngFor="let item of data; let i = index; let isFirst = first; let isLast = last;">
+      <div [ngClass]="{
+            'w-full': true, 
+            'md:w-full': isFirst && (data.length % 2 !== 0),
+            'md:w-1/2': !isFirst || (data.length % 2 === 0)
+          }">
+        <a4mbs-display-image
+          [imagePath]="item.image.path"
+          [hasOverlay]="true"
+          [overlayTitle]="item.text.title"
+          [overlaySubtitle]="item.text.content"
+          [overlayHasLinkButton]="true"
+          [overlayLinkButtonLabel]="item.button?.title"
+          [overlayLinkButtonURL]="item.button?.link">
+        </a4mbs-display-image>
+      </div>
+    </ng-container>
+  </div>
+
+</div>

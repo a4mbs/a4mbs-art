@@ -1,0 +1,24 @@
+<div class="container max-w-7xl mx-auto px-10 min-w-[400px]">
+  <div [ngClass]="[setResponsiveStyle(), getTimelineColor(true)]">
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content">
+        &nbsp;<!-- This line is necessary to extend the length of the line at the beginning of the timeline, but it will also generate an extra line within the timeline, causing the column alternation to be reversed. To correct this reversal, the two will be inverted in the component logic within `getTimeLineStyle`. -->
+      </div>
+    </div>
+    <ng-container *ngFor="let template of timelineItems">
+      <div class="timeline-item">
+        <div class="timeline-img" [ngClass]="getTimelineColor()"></div>
+        <div class="timeline-content p-5 lg:p-11" [ngClass]="getElementColor()">
+          <ng-container *ngTemplateOutlet="template"></ng-container>
+        </div>
+      </div>
+    </ng-container>  
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content">
+        &nbsp; <!--  This line is necessary to extend the length of the line at the end of the timeline. -->
+      </div>
+    </div>
+  </div>
+</div>
