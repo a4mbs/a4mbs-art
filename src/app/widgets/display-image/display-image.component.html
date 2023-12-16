@@ -1,0 +1,33 @@
+<div class="relative">
+    <ng-container *ngIf="getCDNServiceName()==='cloudinary'">
+      <advanced-image 
+          [width]="width ? width : '100%'" 
+          [height]="height ? height : '100%'" 
+          [cldImg]="image">
+      </advanced-image>
+    </ng-container>
+    <ng-container *ngIf="hasOverlay"> 
+    <div class="
+            absolute 
+            inset-0 
+            flex 
+            flex-col 
+            justify-center 
+            items-center 
+            opacity-0 
+            hover:opacity-100"
+            [ngClass]="overlayColorTailwindClass">        
+        <h2 class="text-white mb-5">{{ overlayTitle }}</h2>
+        <h6 class="font-special-simple text-sm uppercase text-white mb-10">{{overlaySubtitle}}</h6>
+          <ng-container *ngIf="overlayHasLinkButton">
+            <a [href]="overlayLinkButtonURL" 
+                target="_blank" 
+                rel="noopener"
+                class="btn"             
+                [ngClass]="['text-sm text-white no-underline hover:no-underline',overlayLinkButtonTailwindClass]">
+              {{ overlayLinkButtonLabel }}
+            </a>
+          </ng-container>      
+      </div>
+    </ng-container>
+  </div>

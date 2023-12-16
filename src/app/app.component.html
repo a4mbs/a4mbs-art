@@ -1,2 +1,30 @@
-<router-outlet></router-outlet>
-<a4mbs-footer></a4mbs-footer>
+<div class="flex flex-col h-screen">
+    <div class="flex-grow">
+      <!-- <nav>
+        <w-navbar></w-navbar>
+      </nav> -->
+      <router-outlet></router-outlet>
+      <button class="fixed 
+          right-5 
+          bottom-5 
+          btn
+          hover:text-white
+          bg-primary
+          hover:bg-primary-500
+          text-3xl 
+          lg:text-4xl
+          w-14 
+          h-14
+          lg:w-16
+          lg:h-16 
+          p-0 
+          m-0 
+          pt-1   
+          rounded-full" (click)="scrollToTop()" *ngIf="showScrollButton">
+          <i class="fi fi-rs-angle-small-up"></i>
+      </button>
+    </div>
+    <footer>
+        <a4mbs-footer></a4mbs-footer>
+    </footer>
+  </div>
