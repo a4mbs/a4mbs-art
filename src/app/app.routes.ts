@@ -8,21 +8,21 @@ export const routes: Routes = [
   {
     path: '', 
     component: HomeComponent,
-    title: 'Home Page'
+    data: { title: '' }
   },
   {
     path: 'privacy-policy',
     component: PrivacyPolicyComponent,
-    title: 'Privacy Policy'
+    data: { title: 'Privacy Policy' }
   },
   {
     path: 'terms-of-use',
     component: TermsOfUseComponent,
-    title: 'Terms of Use'
+    data: { title: 'Terms of Use' }
   },
   {
     path: 'copyright',
     component: CopyrightComponent,
-    title: 'Copyright'
+    data: { title: 'Copyright' }  
   }
 ];
