@@ -5,8 +5,7 @@ import { HeroComponent } from '../../../widgets/hero/hero.component';
   selector: 'a4mbs-home',
   standalone: true,
   imports: [HeroComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './home.component.html'  
 })
 export class HomeComponent {
 

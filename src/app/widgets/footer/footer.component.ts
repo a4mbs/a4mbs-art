@@ -9,7 +9,6 @@ import { DisplayImageComponent } from '../display-image/display-image.component'
   standalone: true,
   imports: [CommonModule, RouterModule, DisplayImageComponent],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
 })
 export class FooterComponent {
   isFormDisabled: boolean = true;
